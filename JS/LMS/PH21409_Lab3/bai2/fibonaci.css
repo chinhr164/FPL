@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 20px auto;
+    width: 500px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+p{
+    font-family: Tahoma;
+    font-size: 15px;
+    font-weight: bold;
+}

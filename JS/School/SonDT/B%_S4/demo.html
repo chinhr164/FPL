@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="Open()">Mở cửa sổ</button>
+    <button onclick="Close()">Đóng cửa sổ</button>
+    <button onclick="chuyenTrang()">Chuyển trang sau 5 s</button>
+
+    <script>
+        var OpenWin = null;
+        function Open() {
+            OpenWin = window.open("https://www.google.com/", "_blank", "width = 150, height = 150")
+        }
+
+        function Close() {
+            OpenWin.close();
+        }
+
+        function chuyenTrang() {
+            if (!OpenWin.closed) {
+                setTimeout(function () {
+                    OpenWin.location.href = 'https://www.google.com/'
+                }, 5000)
+            }
+
+        }
+
+        // // Đối tượng Screen được sử dụng
+        // console.log("Chiều cao được phép sử dụng: "+screen.availHeight);
+        // console.log("Chiều rộng được phép sử dụng: "+screen.availWidth);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="c326e661a1425c1c0553.jpg" alt="" wi>
+    <img src="c77af13cb61f4b41120e.jpg" alt="">
+    <p>
+        Đoạn văn mô tả <a href="https://google.com">Liên kết</a>
+    </p>
+    <script>
+        // 1. gán thuộc tính chiều rộng chiều cao cho ảnh
+        var img = document.querySelector('img');
+        img.setAttribute('width', '200px');
+        img.setAttribute('height', '200px');
+
+        img.nextElementSibling.setAttribute('width', '200px');
+        img.nextElementSibling.setAttribute('height', '200px');
+
+        // 2. từ thẻ ảnh, tìm ra thể p và tìm ra thẻ a
+        var p = img.nextElementSibling.nextElementSibling;
+        var a = p.firstElementChild;
+
+        console.log(p);
+        console.log(a);
+
+        // 3. lấy địa chỉ trang web thẻ a liên kết tới
+        console.log(a.href);
+
+        // 4. Gắn sự kiện bấm chuột vào ảnh
+        img.onclick = function () {
+            location.href = a.href;
+        }
+    </script>
+</body>
+
+</html>

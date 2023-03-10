@@ -1,0 +1,73 @@
+.container{
+    width: 980px;
+    margin: 0px auto;
+    font-family: Tahoma;
+    font-size: 13px;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    height: 50px;
+    background-color: darkblue;
+    text-align: center;
+}
+
+/* Menu cấp 1*/
+.main{
+    display: inline-block;
+}
+
+.main>li{
+    float: left;
+    padding: 15px 25px;
+}
+
+.main a{
+    color: white;
+}
+
+.main li{
+    position: relative;
+}
+
+/* Menu cấp 2*/
+.sub{
+    background-color: slategrey;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 120px;
+    text-align: left;
+    display: none;
+}
+
+.sub li{
+    padding: 10px;
+}
+
+li:hover>.sub{
+    display: block;
+}
+
+.sub .sub{
+    background-color: slategrey;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 120px;
+    text-align: left;
+    display: none;
+}
+
+li:hover>.sub:hover .sub{
+    display: block;
+}

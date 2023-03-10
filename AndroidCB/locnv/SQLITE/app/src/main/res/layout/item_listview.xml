@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvId"
+        android:text="ID"
+        android:textSize="20dp"
+        android:background="#62F6F5"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvMa"
+        android:text="Mã"
+        android:textSize="20dp"
+        android:background="#62F6F5"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvTen"
+        android:text="Tên"
+        android:textSize="20dp"
+        android:background="#62F6F5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

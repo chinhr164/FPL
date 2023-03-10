@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="libs/angular.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div ng-app="my-app" ng-controller="my-controller">
+        <h2>Số a <input type="text" ng-model="so_a"></h2>
+        <h2>Số b <input type="text" ng-model="so_b"></h2>
+        <button ng-click="cong()">Cộng</button>
+        <button ng-click="tru()">Trừ</button>
+        <button ng-click="nhan()">Nhân</button>
+        <button ng-click="chia()">Chia</button>
+        <h2>Kết quả: <span>{{kq}}</span></h2>
+    </div>
+
+    <script>
+        var app = angular.module('my-app', []);
+        app.controller('my-controller', function ($scope) {
+
+            $scope.cong = function () {
+                $scope.kq = Number(this.so_a) + Number(this.so_b);
+            }
+
+            $scope.tru = function () {
+                $scope.kq = Number(this.so_a) - Number(this.so_b);
+            }
+
+            $scope.nhan = function () {
+                $scope.kq = Number(this.so_a) * Number(this.so_b);
+            }
+
+            $scope.chia = function () {
+                if (this.so_b == 0) {
+                    alert("Không tồn tại phép chia 0")
+                } else
+                    $scope.kq = Number(this.so_a) / Number(this.so_b);
+            }
+        })
+    </script>
+
+   
+</body>
+
+</html>

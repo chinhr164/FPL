@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Thực hành DOM</h1>
+    <p>Đây là đoạn văn bản<br>
+        <a href="#">Liên kết ảo</a>
+    </p>
+
+
+
+
+    <script>
+        var p = document.querySelector('p');
+        console.log(p); //ghi log
+        console.dir(p); //xem cây thư mục
+        
+        //Lấy giá trị ND thẻ p bằng thuộc tính innerText  
+        
+        //Gán ND thẻ HTML
+        p.innerHTML = "<i> Nội dung </i>";
+        p.innerText = "<i> Nội dung </i>";
+    </script>
+</body>
+
+</html>

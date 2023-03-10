@@ -1,0 +1,35 @@
+form{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-gr{
+    margin: 10px;
+    margin-left: 70px;
+    text-align: left;
+}
+
+.form-gr>label{
+    display: inline-block;
+    width: 120px;
+}
+
+.form-gr>input, select{
+    padding: 4px;
+}
+
+button{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px 10px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    box-shadow: 2px 2px 3px black;
+}
+
+span{
+    display: block;
+    margin: 4px;
+    font-size: 12px;
+}

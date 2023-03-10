@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/linear_interpolator"
+    android:ordering="sequentially">
+
+    <set android:ordering="together">
+        <objectAnimator
+            android:duration="3000"
+            android:propertyName="scaleX"
+            android:valueTo="0.2f" />
+        <objectAnimator
+            android:duration="3000"
+            android:propertyName="scaleY"
+            android:valueTo="0.2f" />
+    </set>
+
+    <objectAnimator
+        android:propertyName="translationY"
+        android:valueFrom="0f"
+        android:valueTo="500f"
+        android:valueType="floatType" />
+
+    <objectAnimator
+        android:propertyName="translationY"
+        android:valueFrom="500f"
+        android:valueTo="-500f"
+        android:valueType="floatType" />
+
+    <objectAnimator
+        android:propertyName="translationX"
+        android:valueFrom="0f"
+        android:valueTo="350f"
+        android:valueType="floatType" />
+
+    <objectAnimator
+        android:propertyName="translationX"
+        android:valueFrom="350f"
+        android:valueTo="-350f"
+        android:valueType="floatType" />
+
+    <set android:ordering="together">
+        <objectAnimator
+            android:propertyName="translationX"
+            android:valueFrom="-350f"
+            android:valueTo="0f" />
+        <objectAnimator
+            android:propertyName="translationY"
+            android:valueFrom="-500f"
+            android:valueTo="0" />
+    </set>
+
+    <set android:ordering="together">
+        <objectAnimator
+            android:duration="3000"
+            android:propertyName="scaleX"
+            android:valueFrom="0.2f"
+            android:valueTo="1f"/>
+        <objectAnimator
+            android:duration="3000"
+            android:propertyName="scaleY"
+            android:valueFrom="0.2f"
+            android:valueTo="1f"/>
+    </set>
+</set>

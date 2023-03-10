@@ -1,0 +1,25 @@
+h2{
+    border: 1px solid blue;
+}
+
+.box{
+    border: 2px dotted red;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    margin: 20px;
+}
+
+.box-anh{
+    width: 800px;
+    height: 500px;
+    padding: 0px;
+    margin: 0px;
+    border: 50px double red;
+    border-radius: 15px;
+    box-shadow: 5px 5px 8px yellow;
+    background-image: url(KCDykem.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+

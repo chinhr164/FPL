@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tương tác với ảnh</h1>
+    <img class="anh" src="img/anh1.jpg">
+    <img class="anh" src="img/anh2.jpg">
+
+    <!-- Code js -->
+    <script> 
+        // document.querySelector().style.borderRadius
+        // đọc thông tin thuộc tính thẻ
+        var anh1 = document.querySelector('.anh');
+        var anh2 = anh1.nextElementSibling;
+
+        // Lấy thuộc tính đường dẫn ảnh
+        var url = anh1.getAttribute('src'); //Cách 1
+        var url2 = anh2.src; //Cách 2
+
+        // Thiết lập kich thước
+        anh1.width = 200;
+        anh1.height = 100;
+        anh2.width = 300;
+        anh2.height = 200;
+
+        // Thiết lập bo góc
+        anh1.style.borderRadius = "50%"
+
+        // Thiết lập hiệu ứng đưa chuột vào-ra ảnh thì đổ bóng
+        anh1.onmouseover = function(){
+            // tùy biến các lệnh khi đua chuột vào
+            this.style.boxShadow = "0 0 10px blue"
+            this.src = "img/anh2.jpg"
+        }
+        anh1.onmouseout = function(){
+            this.style.boxShadow = "none"
+            this.src = "img/anh1.jpg"
+        }
+        
+    </script>
+</body>
+</html>

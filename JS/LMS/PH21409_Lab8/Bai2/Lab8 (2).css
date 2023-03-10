@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div[ng-controller="handleEventController"] {
+    width: 500px;
+    margin: 20px auto;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+tr {
+    height: 40px;
+}
+
+tr:first-child {
+    height: 30px;
+    text-align: center;
+    background-color: azure;
+}
+
+td {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+td:first-child {
+    width: 130px;
+}
+
+td:nth-child(2) {
+    width: 60px;
+}
+
+td:nth-child(3) {
+    width: 100px;
+}
+
+td:nth-child(4) {
+    width: 80px;
+}
+
+td:last-child {
+    width: 130px;
+    text-align: center;
+}

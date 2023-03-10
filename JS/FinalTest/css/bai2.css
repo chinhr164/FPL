@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .box {
+    width: 600px;
+    margin: 10px auto;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    border: 1px solid black;
+    background-color: rgba(177, 250, 226, 0.226);
+  }
+  
+  form {
+    margin: 30px 50px;  
+  }
+  
+  .form-gr {
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  label {
+    display: inline-block;
+    width: 170px;
+    margin: 0;
+  }
+  
+  input {
+    width: 250px;
+    padding: 4px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  select {
+    width: 260px;
+    padding: 4px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  input[type="radio"] {
+    width: 10px;
+  }
+  
+  button {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc
+  }
+  
+  button:hover{
+      box-shadow: 2px 2px 2px black;
+  }
+  
+  span{
+      display: block;
+      color: red;
+      padding: 5px 0;
+  }
+  

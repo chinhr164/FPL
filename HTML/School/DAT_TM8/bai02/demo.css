@@ -1,0 +1,11 @@
+h1.red-class{
+    color: red;
+}
+
+.blue-class h1{
+    color: blue;
+}
+
+.green-class>h1{
+    color: green;
+}

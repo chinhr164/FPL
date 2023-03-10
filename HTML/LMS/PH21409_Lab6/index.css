@@ -1,0 +1,146 @@
+body {
+    margin: 0px;
+}
+
+header {
+    background-image: url(images/FPT_polytechnic_banner-1.jpg);
+    height: 300px;
+    background-size: 100% 100%;
+}
+
+nav {
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    font-variant: small-caps;
+    padding: 15px;
+}
+
+nav>a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav>a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+article {
+    min-height: 300px;
+    width: 75%;
+    background-color: white;
+    float: left;
+}
+
+iframe {
+    width: 100%;
+    min-height: 600px;
+    margin: 0px;
+}
+
+.container>aside {
+    min-height: 600px;
+    width: 25%;
+    background-color: lightgray;
+    float: right;
+    line-height: 25px;
+}
+
+aside>ul a {
+    color: blue;
+    text-decoration: none;
+}
+
+footer {
+    border-top: 5px double orangered;
+    line-height: 50px;
+    background-color: lightcyan;
+    text-align: center;
+    font-variant: small-caps;
+    clear: both;
+    min-height: 70px;
+}
+
+.column {
+    width: 25%;
+    float: left;
+}
+
+.san-pham {
+    border-radius: 10px;
+    box-shadow: 0 0 5px gray;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.san-pham .ten {
+    font-size: larger;
+    font-variant: small-caps;
+    color: blue;
+}
+
+.san-pham img {
+    width: 200px;
+    height: 200px;
+}
+
+.san-pham .gia {
+    color: red;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.san-pham .gia del {
+    color: gary;
+}
+
+
+.laptop {
+    font-family: "Segoe UI";
+    padding: 0;
+    border: none;
+    height: auto;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.laptop h1 {
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+.laptop>article {
+    background-image: url(images/laptop/60632_laptop_acer_gaming_predator_triton_300_pt315_53_11.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 35%;
+    float: left;
+    margin-top: 30px;
+}
+
+
+.laptop>aside {
+    background-color: white;
+    width: 60%;
+    float: right;
+}
+
+.laptop .chinh-sach {
+    color: #222;
+    font-family: "Segoe UI";
+    font-size: 13px;
+    border: 1px solid #ddd;
+    padding: 15px;
+
+}
+
+.laptop .gia {
+    font-weight: 700;
+    font-family: Helvetica;
+    color: #bf081f;
+    font-size: 27px;
+}

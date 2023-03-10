@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chuỗi</h1>
+    <script>
+        var chuoi = "<b>Hà Nội</b>,<br> ngày 18 tháng 03 năm 2022,\n trời nắng.";
+        console.log("Chiều dài của chuỗi: " + chuoi.length);
+        console.log(chuoi);
+        document.write(chuoi);
+
+        // Chuỗi 2
+        var chuoi2 = "Hà Nội <h2 style='color:red>' 2022 </h2>";
+        console.log(chuoi2);
+        document.write(chuoi2);
+        console.log(chuoi2.length);
+
+        // lấy ra 2022
+        so = chuoi2.substring(30, 34);
+        console.log("Chuỗi vừa tách: " + so);
+
+
+    </script>
+</body>
+
+</html>

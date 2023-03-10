@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>VD về ng-repeat in danh sách đối tượng sinh viên</h1>
+    <div ng-app="zr-app" ng-controller="zr-controller">
+        <div>
+            Mã SV <input type="text" ng-model="id"> <br><br>
+            Tên SV <input type="text" ng-model="name"><br><br>
+            Điểm <input type="number" ng-model="mark"><br><br>
+            <button ng-click="add()">thêm</button>
+        </div>
+        <hr width="500px" align="left">
+        <table border="1">
+            <tr>
+                <th>MSV</th>
+                <th>Họ tên</th>
+                <th>Điểm</th>
+                <th>Xếp loại</th>
+            </tr>
+            <tr ng-repeat="x in dssv">
+                <td>{{x.masv|uppercase}}</td>
+                <td>{{x.hoTen | lowercase}}</td>
+                <td>{{x.diem}}</td>
+                <td>{{xeploai(x.diem)}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var app = angular.module('zr-app', []);
+        app.controller('zr-controller', function ($scope) {
+            // Khởi tạo mảng sv
+            $scope.dssv = [
+                { masv: 'sv01', hoTen: 'Nguyên Van A', diem: 7 },
+                { masv: 'sv02', hoTen: 'Nguyên Van A2', diem: 9 },
+                { masv: 'sv03', hoTen: 'Nguyên Van A3', diem: 5 },
+                { masv: 'sv04', hoTen: 'Nguyên Van A4', diem: 8 }
+            ]
+
+            // Thêm cột xếp loại
+            $scope.xeploai = function (x) {
+                if (x >= 9)
+                    return "giỏi";
+                else if (x >= 5)
+                    return "khá";
+                else
+                    return "tb";
+            }
+
+            // Thêm 1 form nhập thông tin
+            // gồm mã SV, họ tên, điểm
+            // có 1 nút bấm thì thêm dữ liệu vào mảng dssv
+            // sử dụng hàm push() để thêm vào mảng
+            $scope.add = function () {
+                var sv = {
+                    masv: $scope.id,
+                    hoTen: $scope.name,
+                    diem: $scope.mark
+                };
+                $scope.dssv.push(sv);
+                
+                // Xóa nd trong form
+                $scope.id = "";
+                $scope.name = "";
+                $scope.mark = "";
+            }
+        });
+        // Làm việc với bộ lọc
+    </script>
+</body>
+
+</html>

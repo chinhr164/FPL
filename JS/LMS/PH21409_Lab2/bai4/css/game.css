@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.paper{
+    margin: 25px auto;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.paper>p{
+    font-family: Tahoma;
+    font-size: 18px;
+    text-align: center;
+}

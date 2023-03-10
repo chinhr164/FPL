@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div[ng-controller="filterOrderByCtrl"] {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.filter{
+    text-align: center;
+    margin: 15px auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.filter>input{
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+tr {
+    height: 40px;
+}
+
+tr:first-child {
+    height: 30px;
+    text-align: center;
+    background-color: azure;
+}
+
+td {
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+}
+
+td:first-child {
+    width: 120px;
+}
+
+td:nth-child(2) {
+    width: 150px;
+}
+
+td:nth-child(3) {
+    width: 150px;
+}
+
+td:nth-child(4) {
+    width: 80px;
+}
+
+td:last-child {
+    width: 130px;
+}

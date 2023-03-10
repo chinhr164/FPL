@@ -1,0 +1,61 @@
+form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    font-family: 'Courier New';
+    text-align: center;
+    background-color: azure;
+}
+
+.form-group, .form-group1 {
+    text-align: left;
+    padding: 10px 0;
+}
+
+.form-group>label {
+    display: inline-block;
+    width: 130px;
+}
+
+.form-group>input {
+    padding: 3px;
+}
+
+.birthday {
+    width: 30px
+}
+
+#year{
+    width: 50px
+}
+
+.form-group1>input {
+    margin: 10px 0;
+}
+
+.form-group1>label {
+    width: 130px;
+    height: 100px;
+    float: left;
+}
+
+button{
+    width: 90px;
+    padding: 5px;
+    margin: 10px 0;
+    font-family: 'Courier New';
+    font-size: 15px;
+    background-color: azure;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+}
+
+button:hover{
+    background-color: rgb(210, 235, 235);
+}
+
+span{
+    display: block;
+    color: red;
+    margin-top: 5px;
+}

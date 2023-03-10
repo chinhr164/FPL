@@ -1,0 +1,23 @@
+.box {
+    text-align: center;
+}
+
+.anh>img {
+    width: 25%;
+    margin: 30px 30px;
+    box-shadow: 6px 6px 15px green;
+    border-radius: 5%;
+}
+
+.nut {
+    margin: 15px;
+}
+
+.nut>span {
+    border: 2px solid black;
+    padding: 10px 45px;
+    border-radius: 20px;
+    margin: 5px;
+    text-decoration: none;
+    box-shadow: inset 0px 0px 15px blue;
+}

@@ -1,0 +1,128 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 980px;
+    margin: 0 auto;
+}
+
+a{
+    font-family: Tahoma;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
+header{
+    background-color: orangered;
+    height: 100px;
+    margin: 0;
+    position: relative;
+}
+
+header>img{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+header>form{    
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+form>button{
+    background-color: rgb(0, 26, 255);
+    color: #fff;
+}
+
+nav{
+    height: 35px;
+    background-color: rgb(230, 150, 2);
+    margin: -16px 0 10px;
+}
+
+.menu{
+    list-style: none;
+    text-align: center;
+}
+
+.menu>li{
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu>li:hover{
+    display: inline-block;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.menu>li:hover>a{
+    color: rgb(230, 150, 2);
+}
+
+article>h2{
+    text-transform: uppercase;
+    font-family: Tahoma;
+    color: blue;
+}
+.news{
+    font-family: Tahoma;
+    font-size: 15px;
+}
+.news-1,.news-2, .news-3{
+    float: left;
+    border: 1px solid #ccc;
+    padding-top: 15px;
+    padding-left: 25px;
+}
+
+.news-1{
+    width: 306px;
+    height: 442px;
+    margin-right: 28px;
+}
+
+.news-2, .news-3{
+    width: 576px;
+    height: 200px;
+    padding-right: 15px;
+}
+
+.news-2{
+    margin-bottom: 25px;
+}
+
+.news-2>img,.news-3>img{
+    float: left;
+    margin-right: 30px;
+}
+
+
+.title{
+    font-weight: bold;
+    font-size: 18px;
+    color: orangered;
+}
+
+.content{
+    text-align: justify;
+}
+
+footer{
+    height: 50px;
+    background-color: rgb(255, 51, 0);
+    text-align: center;
+}
+
+footer>p{
+    padding-top: 20px;
+    font-weight: bold;
+    font-family: Tahoma;
+}

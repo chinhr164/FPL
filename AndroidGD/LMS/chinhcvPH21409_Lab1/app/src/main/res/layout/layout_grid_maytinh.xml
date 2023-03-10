@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding">
+
+    <EditText
+        android:id="@+id/ed_calculator_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_columnSpan="4"
+        android:background="@drawable/vien"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/size_Title" />
+
+    <Button
+        android:id="@+id/ed_calculator_delete"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/black"
+        android:padding="@dimen/padding"
+        android:text="Delete"
+        android:textSize="@dimen/size_Title" />
+
+    <Button
+        android:textAlignment="center"
+        android:id="@+id/ed_calculator_7"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/gray"
+        android:gravity="center|fill"
+        android:text="7"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_8"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/gray"
+        android:gravity="center|fill"
+        android:text="8"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_9"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="2"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/gray"
+        android:gravity="center|fill"
+        android:text="9"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_div"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="2"
+        android:textAlignment="center"
+        android:layout_column="3"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/black"
+        android:gravity="center|fill"
+        android:text="/"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_4"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/gray"
+        android:gravity="center|fill"
+        android:text="4"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_5"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/gray"
+        android:gravity="center|fill"
+        android:text="5"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_6"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="3"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/gray"
+        android:gravity="center|fill"
+        android:text="6"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_multi"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="3"
+        android:layout_column="3"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/black"
+        android:gravity="center|fill"
+        android:text="x"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_1"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/gray"
+        android:gravity="center|fill"
+        android:text="1"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_2"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/gray"
+        android:gravity="center|fill"
+        android:text="2"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_3"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="4"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/gray"
+        android:gravity="center|fill"
+        android:text="3"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_minus"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="4"
+        android:layout_column="3"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/black"
+        android:gravity="center|fill"
+        android:text="-"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_."
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/gray"
+        android:gravity="center|fill"
+        android:text="."
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_0"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/gray"
+        android:gravity="center|fill"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_kq"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="5"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/black"
+        android:gravity="center|fill"
+        android:text="="
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ed_calculator_add"
+        android:layout_height="@dimen/cal_height"
+        android:layout_row="5"
+        android:layout_column="3"
+        android:layout_columnWeight="1"
+        android:layout_margin="@dimen/cal_margin"
+        android:backgroundTint="@color/black"
+        android:gravity="center|fill"
+        android:padding="0dp"
+        android:text="+"
+        android:textAlignment="center"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+
+</GridLayout>

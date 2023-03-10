@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_contact"
+        android:icon="@drawable/ic_contact"
+        android:title="Contact" />
+    <item
+        android:id="@+id/nav_bookmark"
+        android:icon="@drawable/ic_bookmark"
+        android:title="Bookmark" />
+    <item
+        android:id="@+id/nav_calllog"
+        android:icon="@drawable/ic_call_log"
+        android:title="CallLogs" />
+    <item
+        android:id="@+id/nav_media"
+        android:icon="@drawable/ic_media"
+        android:title="Media" />
+</menu>

@@ -1,0 +1,44 @@
+.sanpham {
+    width: 300px;
+    height: 470px;
+    box-shadow: 0 0 5px black;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 15px;
+    font-variant: small-caps;
+    font-weight: bold;
+    margin: 15px;
+    float: left;
+    position: relative;
+}
+
+.name {
+    padding: 25px;
+}
+
+.img {
+    width: 60%;
+}
+
+.new-icon {
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    width: 25%;
+}
+
+.icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 12%;
+}
+
+.price {
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+    font-size: 20px;
+    color: red;
+}

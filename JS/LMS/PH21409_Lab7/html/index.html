@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
+    <script src="../libs/angular.min.js"></script>
+    <title>Đăng kí</title>
+</head>
+<!-- Sử dụng AngularJS để hiển thị trên  -->
+
+<body ng-app="">
+    <div class="container">
+        <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+        <form action="" onsubmit="return validate();">
+            <div class="form-group">
+                <label>Mã sinh viên<wrap style="color: red"> (*)</wrap></label>
+                <input type="text" id="idSV" class="form-control" ng-model="idSV">
+                <span id="idSV_error"></span>
+            </div>
+            <div class="form-group">
+                <label>Họ và tên<wrap style="color: red"> (*)</wrap></label>
+                <input type="text" id="name" class="form-control" ng-model="name">
+                <span id="name_error"></span>
+            </div>
+            <div class="form-group">
+                <label>Email<wrap style="color: red"> (*)</wrap></label>
+                <input type="text" id="email" class="form-control" ng-model="email">
+                <span id="email_error"></span>
+            </div>
+            <div class="form-group">
+                <label>Giới tính<wrap style="color: red"> (*)</wrap></label>
+                <fieldset class="form-control" id="gender" style="background-color: #fff;">
+                    <label><input type="radio" name="gender" ng-model="gender" value="Nam">Nam</label>
+                    <label><input type="radio" name="gender" ng-model="gender" value="Nữ">Nữ</label>
+                </fieldset>
+                <span id="gender_error"></span>
+            </div>
+            <div class="form-group">
+                <label>Sở thích<wrap style="color: red"> (*)</wrap></label>
+                <fieldset class="form-control" id="favorite" style="background-color: #fff;">
+                    <label><input type="checkbox" name="favorite" ng-model="favor1" >Thể thao</label>
+                    <label><input type="checkbox" name="favorite" ng-model="favor2" >Du lịch</label>
+                    <label><input type="checkbox" name="favorite" ng-model="favor3" >Âm nhạc</label>
+                    <label><input type="checkbox" name="favorite" ng-model="favor4" >Ẩm thực</label>
+                </fieldset>
+                <span id="favorite_error"></span>
+            </div>
+            <div class="form-group">
+                <label>Quốc tịch<wrap style="color: red"> (*)</wrap> <br>
+                    <select class="form-control" id="national" ng-model="national">
+                        <option value="" selected="selected">Chọn quốc tịch</option>
+                        <option value="RU">Russia
+                        <option value="SG">Singapore
+                        <option value="KR">South Korea
+                        <option value="ES">Spain
+                        <option value="TW">Taiwan
+                        <option value="TR">Turkey
+                        <option value="TH">Thailand
+                        <option value="GB">United Kingdom
+                        <option value="US">United States
+                        <option value="VN">Việt Nam
+                    </select>
+                    <span id="national_error"></span>
+            </div>
+            <div class="form-group">
+                <label for="">Ghi chú: </label>
+                <textarea rows="5" cols="50" id="note" class="form-control" ng-model="note"></textarea>
+                <span id="note_error"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="form-button" value="Đăng ký">
+            </div>
+            <div class="info">
+                <br>
+                <hr>
+                <h1>Thông tin đăng ký</h1>
+                <p class="idSV">Mã sinh viên: {{idSV}}</p>
+                <p class="name">Họ tên: {{name}}</p>
+                <p class="email">Email: {{email}}</p>
+                <div class="gender" ng-switch="gender">
+                    <label>Giới tính: </label>
+                    <div ng-switch-when="Nam" style="display: inline-block;">
+                        <label>Nam</label>
+                    </div>
+                    <div ng-switch-when="Nữ" style="display: inline-block;">
+                        <label>Nữ</label>
+                    </div>
+                </div>
+                <div class="favor">
+                    <br>
+                    <div style="display: inline-block;">Sở thích:</div>
+                    <label ng-show="favor1"> Thể thao,</label>
+                    <label ng-show="favor2"> Du lịch,</label>
+                    <label ng-show="favor3"> Âm nhạc,</label>
+                    <label ng-show="favor4"> Ẩm thực,</label>
+                </div>
+
+                <div class="national" ng-switch="national">
+                    <br>
+                    <div style="display: inline-block;">Quốc tịch: </div>
+                    <div ng-switch-when="RU" style="display: inline-block;">
+                        <div>Russia</div>
+                    </div>
+                    <div ng-switch-when="SG" style="display: inline-block;">
+                        <div>Singapore</div>
+                    </div>
+                    <div ng-switch-when="KR" style="display: inline-block;">
+                        <div>Singapore</div>
+                    </div>
+                    <div ng-switch-when="ES" style="display: inline-block;">
+                        <div>South Korea</div>
+                    </div>
+                    <div ng-switch-when="TW" style="display: inline-block;">
+                        <div>Taiwan</div>
+                    </div>
+                    <div ng-switch-when="TR" style="display: inline-block;">
+                        <div>Turkey</div>
+                    </div>
+                    <div ng-switch-when="TH" style="display: inline-block;">
+                        <div>Thailand</div>
+                    </div>
+                    <div ng-switch-when="GB" style="display: inline-block;">
+                        <div>United Kingdom</div>
+                    </div>
+                    <div ng-switch-when="US" style="display: inline-block;">
+                        <div>United States</div>
+                    </div>
+                    <div ng-switch-when="VN" style="display: inline-block;">
+                        <div>Việt Nam</div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/trang-web-3.css">
+    <script src="../js/trang-web-3.js"></script>
+    <title>Bán hàng</title>
+</head>
+
+<body onload="filterPriceLevel();">
+    <div class="container">
+        <h2>BÁN HÀNG</h2>
+        <hr>
+        <select name="" id="priceLevel" onchange="filterPriceLevel();">
+            <option value="0">Chọn mức giá</option>
+            <option value="1">0 - 300</option>
+            <option value="2">300 - 700</option>
+            <option value="3">700 - 1000</option>
+            <option value="4">1000 - </option>
+        </select>
+        <table border="1">
+            <thead>
+                <th><input type="checkbox" id="all" onchange="checkAll(this);"></th>
+                <th>Hàng hóa</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </thead>
+            <tbody id="tbody">
+                <!-- <tr>
+                    <td class="checkColumn"><input type="checkbox"></td>
+                    <td class="nameColumn"></td>
+                    <td class="priceColumn"></td>
+                    <td class="qtyColumn"><input type="number" min="0"></td>
+                    <td class="amountColumn"><span id="amount"></span></td>
+                </tr> -->
+            </tbody>
+            <tfoot>
+                <th colspan="4">TỔNG</th>
+                <th><span id="total" class="total"></span></th>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+</html>

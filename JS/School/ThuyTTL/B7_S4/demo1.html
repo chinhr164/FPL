@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Tạo lớp đối tượng
+        function Hoa(mauHoa, soCanhHoa) {
+            this.mau = mauHoa;
+            this.soCanh = soCanhHoa;
+            this.toaHuong = function () {
+                document.write("toi co mau " + this.mau + ", toi co so canh la " + this.soCanh);
+                document.write("<br>");
+            }
+        }
+
+        // Tạo đối tượng
+        Hoa["Dao"] = new Hoa("Hong", 5);
+        Hoa["Mai"] = new Hoa("Vang", 7);
+        Hoa["Lan"] = new Hoa("Tim", 5);
+
+        // Truy vấn thuộc tính và phương thức
+        // Hoa["Dao"].toaHuong();
+        // Hoa["Mai"].toaHuong();
+        // Hoa["Lan"].toaHuong();
+
+        // Dùng for each để truy vấn
+        for (var x in Hoa)
+            Hoa[x].toaHuong();
+
+        if ("Dao" in Hoa) {
+            alert("Đã có đối tượng hoa Đào");
+            Hoa["Dao"].bieuTuong = "Mùa xuân";
+        }
+        else
+            alert("Đối tượng hoa Đào chưa được tạo");
+        document.write(Hoa["Dao"].bieuTuong);
+    </script>
+</body>
+
+</html>

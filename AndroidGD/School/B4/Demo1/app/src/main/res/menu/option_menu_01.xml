@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_add"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="Add"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_update"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Update"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_contact"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Contact"
+        app:showAsAction="always" />
+</menu>

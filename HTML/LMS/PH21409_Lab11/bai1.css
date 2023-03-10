@@ -1,0 +1,35 @@
+.container{
+    width: 600px;
+    margin: 0 auto;
+    font-family: Tahoma;
+    font-size: 13px;
+    font-weight: bold;
+}
+table{
+    width: 600px;
+    text-align: center;
+    border: none;
+    margin: 0px;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 10px 15px;
+    border: 1px solid #75B43A;
+}
+
+tr:first-child{
+    background-color: #75B43A;
+    color: #fff;
+}
+tr:first-child>th{
+    border-right: 1px solid white;
+}
+
+tr:first-child>th:last-child{
+    border-right: 1px solid #75B43A;
+}
+
+tr:nth-child(2){
+    background-color: #E1F8CB;
+}

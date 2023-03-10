@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bai2.css">
+    <script src="/libs/angular.min.js"></script>
+    <script src="/js/bai2.js"></script>
+    <title>Đăng ký</title>
+</head>
+
+<body>
+    <div class="box" ng-app="myApp" ng-controller="myController">
+        <h1>ĐĂNG KÝ KHÓA HỌC ONLINE</h1>
+        <form ng-submit="validate()">
+            <div class="form-gr">
+                <label>Họ tên</label>
+                <input type="text" ng-model="name">
+                <span>{{name_error}}</span>
+            </div>
+            <div class="form-gr">
+                <label>Email</label>
+                <input type="text" ng-model="email">
+                <span>{{email_error}}</span>
+            </div>
+            <div class="form-gr">
+                <label>Số điện thoại</label>
+                <input type="text" ng-model="tel">
+                <span>{{tel_error}}</span>
+            </div>
+            <div class="form-gr">
+                <label>Khóa học</label>
+                <select ng-model="less" ng-change="schoolFees()">
+                    <option value="">Chọn khóa học
+                    <option value="1">Khóa học HTML
+                    <option value="2">Khóa học JS
+                    <option value="3">Khóa học PHP
+                </select>
+                <span>{{less_error}}</span>
+            </div>
+            <div class="form-gr">
+                <label>Học phí</label>
+                <input type="text" ng-disabled="less"  ng-model="fee">
+            </div>
+            <div class="form-gr">
+                <label>Hình thức học</label>
+                <input type="radio" ng-model="form" value="1"> Tại trường
+                <input type="radio" ng-model="form" value="2"> Học online
+                <span>{{form_error}}</span>
+            </div>
+            <button>Đăng ký</button>
+        </form>
+    </div>
+</body>
+
+</html>

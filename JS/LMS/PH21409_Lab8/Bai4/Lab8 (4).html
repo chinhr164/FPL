@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Lab8 (4).css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="Lab8 (4).js"></script>
+    <title>Lab8 (4)</title>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="filterOrderByCtrl">
+        <div class="filter"> Show: <select ng-model="sortColumn">
+                <option value="name">Name ASC</option>
+                <option value="birthDate">Date of Birth ASC</option>
+                <option value="name">Salary ASC</option>
+                <option value="-name">Name DESC</option>
+                <option value="-birthDate">Date of Birth DESC</option>
+                <option value="-salary">Salary DESC</option>
+            </select>
+        </div>
+        <table class="table">
+            <tr>
+                <td>Name</td>
+                <td>Date of Birth</td>
+                <td>Salary</td>
+                <td>Gender</td>
+                <td>Status</td>
+            </tr>
+            <tr ng-repeat="employee in employees | orderBy:sortColumn">
+                <td>{{employee.name | uppercase}}</td>
+                <td>{{employee.birthDate | date:"dd/MM/yyyy"}}</td>
+                <td>{{employee.salary | currency:""}}</td>
+                <td>{{employee.gender | lowercase}}</td>
+                <td>{{employee.status | status}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

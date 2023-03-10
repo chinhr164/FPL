@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="demo1.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết trang web đăng ký có sử dụng các thẻ Form: input, select, checkbox, radio.
+    Thực hiện lấy dữ  liêu và kiểm tra hợp lệ ở  mức tối thiểu: Không để trống , giới hạn chiều dài
+    Hiện lỗi ở sau đoạn bị lỗi-->
+
+
+    <form onsubmit="return validate();">
+        <h2>Đăng ký tài khoản</h2>
+        <div class="form-gr">
+            <Label>Họ tên</Label>
+            <input type="text" id="name">
+            <span id="name_error"></span>
+        </div>
+        <div class="form-gr">
+            <Label>Email</Label>
+            <input type="email" id="email">
+            <span id="email_error"></span>
+        </div>
+        <div class="form-gr">
+            <Label>Password</Label>
+            <input type="password" id="password">
+            <span id="pass_error"></span>
+        </div>
+        <div class="form-gr">
+            <label>Nghề nghiệp</label>
+            <select name="" id="jobs">
+                <option value=""></option>
+                <option value="1">Lập trình viên</option>
+                <option value="2">Kế toán</option>
+                <option value="3">Công nhân</option>
+            </select>
+            <span id="jobs_error"></span>
+        </div>
+        <div class="form-gr">
+            <label>Giới tính</label>
+            <input type="radio" name="gender" value="Nam"> Nam
+            <input type="radio" name="gender" value="Nữ"> Nữ
+            <span id="gender_error"></span>
+        </div>
+        <div class="form-gr">
+            <input type="checkbox" id="confirm">
+            <label>Xác nhận</label>
+            <span id="confirm_error"></span>
+        </div>
+        <button>Đăng ký</button>
+    </form>
+
+    <!-- Code js -->
+    <script>
+        // Lấy từng thẻ input
+        function getInput(obj) {
+            return document.querySelector(obj);
+        }
+
+        // Hiện 'span lỗi'
+        function showError(obj, mess) {
+            document.querySelector(obj + "_error").innerText = mess;
+            document.querySelector(obj + "_error").style.color = "red"
+        }
+
+        // Hiện 'span đúng'
+        function showOK(obj) {
+            document.querySelector(obj + "_error").innerText = "Ok";
+            document.querySelector(obj + "_error").style.color = "green"
+        }
+
+        function validate() {
+            //(1) kiểm tra người dùng nhập đúng hay không;
+            //(1) Nếu không hợp lệ yêu cầu nhập lại
+
+            var name = getInput('#name');
+            var email = getInput('#email');
+            var password = getInput('#password');
+            var jobs = getInput('#jobs');
+            var gender = document.querySelectorAll('input[name=gender]');
+            var confirm = getInput('#confirm').checked;
+
+            var flag = true;
+            // 1. Họ tên
+            if (name.value.length < 3 || 30 < name.value.length) {
+                showError("#name", "Họ tên tối thiều 3 ký tự và tối đa 30 ký tự");
+                flag = false;
+            } else {
+                showOK('#name');
+                flag = true;
+            }
+
+            // 2. Email
+            if (email.value.length < 1) {
+                showError("#email", "Vui lòng nhập Email");
+                flag = false;
+            } else {
+                showOK('#email');
+                flag = true;
+            }
+
+            // 3. Password
+            if (password.value.length < 1) {
+                showError("#pass", "Vui lòng nhập Password");
+                flag = false;
+            } else {
+                showOK('#pass');
+                flag = true;
+            }
+
+            //4. Nghề nghiệp
+            if (jobs.value.length < 1) {
+                showError("#jobs", "Vui chọn Nghề nghiệp");
+                flag = false;
+            } else {
+                showOK('#jobs');
+                flag = true;
+            }
+
+            // 5. Giới tính
+            for (var i = 0; i < gender.length; i++) {
+                if (gender[i].checked) {
+                    showOK('#gender');
+                    flag = true;
+                    break;
+                }
+                if (i < gender.length) {
+                    showError("#gender", "Vui chọn Giới tính");
+                    flag = false;
+                }
+            }
+
+            // 6. Xác nhận
+            if (!confirm) {
+                showError("#confirm", 'Vui lòng Xác nhận thông tin');
+                // flag = false;
+            } else {
+                showOK('#confirm');
+                // flag = true;
+            }
+
+
+            // (2) Nếu đúng hiện thông tin
+            if (flag && confirm) {
+                alert('Đăng ký thành công');
+                var info = `
+                <h1 align="center">Thông tin Đăng ký</h1>
+                <div align="center">
+                - Họ tên: ${name.value}<br>
+                - Giới tính: ${document.querySelector('input[name=gender]:checked').value}<br>
+                - Email: ${email.value}<br>
+                - Nghề nghiệp: ${jobs.value}<br>
+                </div>`;
+                document.write(info);
+            } else {
+                return false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

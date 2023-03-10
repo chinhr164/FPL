@@ -1,0 +1,35 @@
+#container {
+    width: 95%;
+    border-radius: 10px;
+    padding: 2%;
+    margin: auto 0;
+    background-color: rgba(255, 153, 0, 0.242);
+    font-family: coming_soon;
+}
+
+#box {
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(255, 153, 0, 0.242);
+    display: flex;
+    padding: 24% 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#info {
+    width: 100%;
+    text-align: center;
+    font-size: large;
+}
+
+#info>div {
+    margin-top: 6%;
+
+}
+
+@font-face {
+    font-family: coming_soon;
+    src: url(../fonts/ComingSoon.ttf);
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/drawable-v24/vien.xml" value="0.1145" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/drawable-v24/vien_bo_goc.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/drawable-v24/vien_bo_phai.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/drawable/ic_collapse.xml" value="0.153" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/drawable/ic_down.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/drawable/ic_expand.xml" value="0.153" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/drawable/ic_right.xml" value="0.153" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/drawable/mipmap.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/activity_main.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/dialog_add_ex_t.xml" value="0.22" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/fragment_ex.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/fragment_ex_s.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/fragment_ex_type.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/fragment_in.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/fragment_in_s.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/fragment_in_type.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/fragment_st.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/fragment_st_ex.xml" value="0.4466666666666667" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/fragment_st_in.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/nav_header.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/row_s_view.xml" value="0.18102564102564103" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layout/row_t_view.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/activity/layout/activity_launcher.xml" value="0.1703125" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/activity/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/activity/layout/nav_header.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/dialog/layout/dialog_add_ex_s.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/dialog/layout/dialog_add_ex_t.xml" value="0.18177083333333333" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/dialog/layout/dialog_add_in_s.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/dialog/layout/dialog_add_in_t.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/dialog/layout/dialog_update_ex_s.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/dialog/layout/dialog_update_ex_t.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/dialog/layout/dialog_update_in_s.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/dialog/layout/dialog_update_in_t.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/fragment/layout/fragment_credit.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/fragment/layout/fragment_ex.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/fragment/layout/fragment_ex_s.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/fragment/layout/fragment_ex_type.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/fragment/layout/fragment_in.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/fragment/layout/fragment_in_s.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/fragment/layout/fragment_in_type.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/fragment/layout/fragment_st_ex.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/fragment/layout/fragment_st_in.xml" value="0.16666666666666666" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/item_view/layout/a.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/item_view/layout/item_list_auto_complete.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/item_view/layout/row_s_ex_view.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/item_view/layout/row_s_in_view.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/item_view/layout/row_s_view.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/item_view/layout/row_t_view.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/layouts/item_view/layout/sss.xml" value="0.184375" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/menu/account_menu.xml" value="0.1" />
+        <entry key="..\:/CODE/AndroidGD/LMS/chinhcvph21409_ASMv2/app/src/main/res/menu/drawer_menu.xml" value="0.184375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

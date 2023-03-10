@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Lab6(4).css">
+    <script src="Lab6(4).js"></script>
+    <title>Lab6(4)</title>
+</head>
+
+<body>
+    <form onsubmit="return validate()">
+        <h2>Form Đăng ký</h2>
+        <div class="form-group">
+            <label>Họ<wrap style="color: red"> (*)</wrap></label>
+            <input type="text" id="lastName">
+            <span id="lastName_error"></span>
+        </div>
+        <div class="form-group">
+            <label>Tên<wrap style="color: red"> (*)</wrap></label>
+            <input type="text" id="firstName">
+            <span id="firstName_error"></span>
+        </div>
+        <div class="form-group">
+            <label>Ngày sinh</label>
+            Ngày&ensp;<input type="number" class="birthday" min="1">
+            Tháng&ensp;<input type="number" class="birthday" min="1" max="12" onchange="birth()">
+            Năm&ensp;<input type="number" class="birthday" id="year" min="1" onchange="birth()">
+            <span id="birthday_error"></span>
+        </div>
+        <div class="form-group">
+            <label>Giới tính</label>
+            <input type="radio" class="gender" name="gender">Nam
+            <input type="radio" class="gender" name="gender">Nữ
+            <span id="gender_error"></span>
+        </div>
+        <div class="form-group">
+            <label>Số điện thoại</label>
+            <input type="text" id="tel">
+            <span id="tel_error"></span>
+        </div>
+        <div class="form-group1">
+            <label>Sở thích</label>
+            <input type="checkbox" class="favor">&ensp;Đọc sách
+            <input type="checkbox" class="favor">&ensp;Xem phim
+            <input type="checkbox" class="favor">&ensp;Nghe nhạc
+            <br>
+            <input type="checkbox" class="favor">&ensp;Đá bóng
+            <input type="checkbox" class="favor">&ensp;May vá
+            <br>
+            <input type="checkbox" class="favor" onchange="favorD(this)"><span style="display: inline-block; color: black;">&ensp;Khác</span>
+            <span id="favor_error"></span>
+        </div>
+        <button>Đăng ký</button>
+    </form>
+</body>
+
+</html>

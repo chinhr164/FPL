@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="icon_width">30dp</dimen>
+    <dimen name="icon_height">30dp</dimen>
+    <dimen name="rcv_padding">8dp</dimen>
+
+    <dimen name="img_width_linear">60dp</dimen>
+    <dimen name="img_height_linear">60dp</dimen>
+
+    <dimen name="img_width_grid">100dp</dimen>
+    <dimen name="img_height_grid">100dp</dimen>
+
+</resources>

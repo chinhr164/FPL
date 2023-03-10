@@ -1,0 +1,37 @@
+.khoi-ngoai {
+    width: 1000px;
+    height: 300px;
+    background: url(images/Banner-AP.png);
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.khoi-trong {
+    background-color: orangered;
+    opacity: 60%;
+    width: 300px;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.khoi-trong>a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
+.khoi-trong>a:hover{
+    background-color: white;
+    color: orangered;
+    padding: 10px 20px;
+}
+
+.anh-trong {
+    position: absolute;
+    top: 60px;
+    left: 140px;
+    width: 40%;
+}

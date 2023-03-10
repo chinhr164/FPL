@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 20px auto;
+    width: 700px;
+    text-align: center;
+    padding: 0;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 0 5px #ccc;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    text-shadow: 0px 0px 5px rgb(185, 185, 185);
+}
+
+.box {
+    position: relative;
+}
+
+
+.anhR {
+    width: 400px;
+    height: 400px;
+    padding: 20px 0;
+}
+
+button{
+    border-radius: 360px;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    box-shadow: inset 0 0 5px #ccc;
+}
+
+.prev-button {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 190px;
+    left: 40px;
+}
+
+.next-button {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 190px;
+    right: 40px;
+}
+
+h3{
+    font-size: 20px;
+}

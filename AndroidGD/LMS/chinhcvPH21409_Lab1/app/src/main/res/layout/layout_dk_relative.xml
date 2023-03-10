@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:text="@string/title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/X"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/padding"
+        android:text="X"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_Title"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignLeft="@id/title"
+        android:layout_marginBottom="@dimen/margin"
+        android:padding="@dimen/padding"
+        android:text="@string/note" />
+
+    <EditText
+        android:id="@+id/ed_lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note"
+        android:layout_alignLeft="@id/title"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_toLeftOf="@id/centerShim"
+        android:background="@drawable/vien"
+        android:hint="@string/lastname"
+        android:padding="@dimen/padding" />
+
+    <EditText
+        android:id="@+id/ed_firstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_toRightOf="@id/centerShim"
+        android:background="@drawable/vien"
+        android:hint="@string/firstname"
+        android:padding="@dimen/padding" />
+
+    <EditText
+        android:id="@+id/ed_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed_lastname"
+        android:layout_alignLeft="@id/title"
+        android:layout_marginVertical="@dimen/margin"
+        android:background="@drawable/vien"
+        android:hint="@string/tel"
+        android:padding="@dimen/padding" />
+
+    <EditText
+        android:id="@+id/ed_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ed_tel"
+        android:layout_alignLeft="@id/title"
+        android:background="@drawable/vien"
+        android:hint="@string/password"
+        android:padding="@dimen/padding" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_height"
+        android:layout_below="@id/ed_pass"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="@string/title" />
+
+    <View
+        android:id="@+id/centerShim"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+</RelativeLayout>

@@ -1,0 +1,199 @@
+.container {
+    width: 980px;
+    margin: 0 auto;
+    font-family: Tahoma;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---- Header ---- */
+header {
+    height: 350px;
+    margin-bottom: -15px;
+    background-image: url(images/header.jpg);
+    background-size: 100% 100%;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+}
+
+header>.T1 {
+    font-size: 50px;
+    position: absolute;
+    top: 50px;
+    left: 130px;
+}
+
+header>.T2 {
+    font-family: cursive;
+    font-size: 100px;
+    position: absolute;
+    bottom: -20px;
+    left: 280px;
+}
+
+.account {
+    background-color: #9999bb;
+    opacity: 60%;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.account>a {
+    float: left;
+    padding: 15px;
+    color: white;
+}
+
+.account>a:hover {
+    padding: 15px;
+    background-color: white;
+    color: #9999bb;
+}
+
+.account>.a2:hover {
+    border-bottom-right-radius: 20px;
+}
+
+/* ---- Nav ---- */
+nav ul {
+    list-style: none;
+}
+
+.menu>li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu {
+    padding: 0px;
+    background-color: rgb(230, 201, 230);
+}
+
+.menu>li {
+    padding: 15px;
+}
+
+.menu>li:hover {
+    background-color: #EEF4E9;
+    padding: 15px;
+}
+
+.menu li:hover>.sub {
+    display: block;
+}
+
+.sub {
+    display: none;
+    background-color: #edf8e4;
+    width: 200px;
+    text-align: left;
+    padding: 0px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.sub>li {
+    padding: 12px;
+}
+
+.sub>li:hover {
+    background-color: rgb(230, 201, 230);
+    padding: 12px;
+}
+
+/* ---- Article ---- */
+.banner {
+    height: 450px;
+    background-image: url(images/banner.jpg);
+    background-size: cover;
+}
+
+.col {
+    border: 1px solid gray;
+    width: 306px;
+    height: 350px;
+    float: left;
+    text-align: center;
+    background: url(images/Book1.png) no-repeat center center;
+    background-size: 80%;
+    margin: 28px;
+    position: relative;
+}
+
+.col:first-child {
+    margin-left: 0;
+}
+
+.col:last-child {
+    margin-right: 0;
+}
+
+/* -- */
+.name {
+    padding-top: 25px;
+    font-size: 25px;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.price {
+    font-size: 18px;
+    color: grey;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+
+}
+
+.discount {
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+h2 {
+    clear: both;
+}
+
+/* -- */
+.news {
+    height: 450px;
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+.news>article{
+    width: 30%;
+    height: 435px;
+    background: url(images/book_top.png) no-repeat center left;
+    background-size: 100%;
+    margin-left: 100px;
+    float: left;
+}
+
+.news>aside{
+    width: 50%;
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+    line-height: 25px;
+}
+
+
+/* ---- Footer ---- */
+footer {
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: rgb(230, 201, 230);
+    font-weight: bold;
+}

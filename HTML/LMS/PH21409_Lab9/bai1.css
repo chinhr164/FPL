@@ -1,0 +1,13 @@
+form{
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+form>input{
+    width: 200px;
+}
+
+hr{
+    width: 350px;
+    float: left;
+}

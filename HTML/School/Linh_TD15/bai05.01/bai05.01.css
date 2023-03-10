@@ -1,0 +1,16 @@
+form {
+    width: 500px;
+    margin: 0 auto;
+    font-family: Tahoma;
+    font-variant: small-caps;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.width{
+    width: 250px;
+}
+
+.button{
+    margin: 0 5px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="format.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <div class="form-group">
+            <label>Họ và tên: </label>
+            <input class="form-control">
+        </div>
+        <div class="form-group">
+            <fieldset class="form-control">
+                <legend>Giới tính</legend>
+                <label><input type="radio" name="gender">Nam</label>
+                <label><input type="radio" name="gender">Nữ</label>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <label>Ngày sinh</label>
+            <input type="date" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Điểm</label>
+            <input type="number" multiple min="0" max="10" step="0.25" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Nghề nghiệp</label>
+            <input list="browers" class="form-control">
+            <datalist id="browers">
+                <option value="Software Engineer">
+                <option value="Network Engineer">
+                <option value="Java Developer">
+                <option value="Website Administrator">
+                <option value="Data Security Analyst">
+            </datalist>
+        </div>
+        <div class="form-group">
+            <fieldset class="form-control">
+                <legend>Sở thích</legend>
+                <label><input type="checkbox">Thể thao</label>
+                <label><input type="checkbox">Du lịch</label>
+                <label><input type="checkbox">Âm nhạc</label>
+                <label><input type="checkbox">Ẩm thực</label>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <label for="">Ghi chú: </label>
+            <textarea rows="10" cols="50" class="form-control"></textarea>
+        </div>
+        <hr>
+        <div class="form-group">
+            <button class="form-button">Đăng ký</button>
+            <button class="form-button">Nhập lại</button>
+        </div>
+    </form>
+</body>
+
+</html>

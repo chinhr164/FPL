@@ -1,0 +1,41 @@
+.container{
+    width: 500px;
+    margin: 0 auto;
+    font-family: 'Courier New';
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    padding: 5px;
+}
+
+input, select {
+    margin-left: 10px;
+    padding: 3px;
+}
+
+button{
+    width: 90px;
+    padding: 5px;
+    margin: 10px 0;
+    font-family: 'Courier New';
+    font-size: 15px;
+    background-color: azure;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+}
+
+button:hover{
+    background-color: rgb(210, 235, 235);
+}
+
+span {
+    color: red;
+}

@@ -1,0 +1,29 @@
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 20px auto;
+    width: 300px;
+    box-shadow: 0px 0px 2px gray;
+    border-radius: 3px;
+}
+
+a {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: orangered;
+    font-variant: small-caps;
+    text-decoration: none;
+    display: block; 
+    padding: 8px 5px 8px 30px; 
+    border-bottom: 1px dotted orangered;
+    background: url(img/1.png) no-repeat 10px;
+    background-size: 12px;
+}
+
+a:hover{ 
+    background: url(img/2.png) no-repeat 10px;
+    background-size: 12px;
+    background-color: orangered;
+    color: white;    
+    padding: 8px 5px 8px 30px;    
+}

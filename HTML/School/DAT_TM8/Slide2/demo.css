@@ -1,0 +1,39 @@
+.f1{
+    color: orange;
+    font-family: Tahoma;
+    font-variant: small-caps;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 5px -10px 5px blue;
+}
+
+.f2{
+    color: rgba(255, 208, 0, 0.932);
+    font-family: 'Time New Roman';
+    font-variant: all-small-caps;
+    text-align: center;
+    text-decoration: line-through;
+    text-shadow: 0px 0px 5px red;
+}
+
+a{
+    font-variant: small-caps;
+    text-decoration: none;
+}
+
+a:link{
+    color: blue;
+}
+
+a:active{
+    color: white;
+}
+
+a:visited{
+    color: green;
+}
+
+a:hover{
+    color: red;
+    text-decoration: underline;
+}

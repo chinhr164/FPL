@@ -1,0 +1,4 @@
+Cách tổ chức file
+- Tạo các thư mục con quản lý (CSS,HTML,JS,IMG)
+- Riêng file index.html để ở ngoài
+

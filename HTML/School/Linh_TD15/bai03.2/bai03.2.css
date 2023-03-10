@@ -1,0 +1,79 @@
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+    font-family: Tahoma;
+    font-size: 13px;
+}
+
+header {
+    height: 350px;
+    /* background-color: blueviolet; */
+    background-image: url(images/Banner-PC.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background-color: darkcyan;
+    text-align: center;
+    padding: 12px 0px;
+}
+
+nav>a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0px 20px;
+}
+nav>a:hover{
+    background-color: rgb(238, 232, 232);
+    color: rgb(23, 92, 9);
+    padding: 12px 20px;
+    transition: 0.3s;
+}
+
+article {
+    width: 70%;
+    height: 500px;
+    background-color: darkgoldenrod;
+    float: left;
+}
+
+article>iframe{
+    width: 100%;
+    height: 500px;
+}
+
+aside {
+    width: 30%;
+    height: 500px;
+    background-color: darkred;
+    float: right;
+    padding-top: 20px;
+}
+
+aside>a{
+    color: gainsboro;
+    text-decoration: none;
+    padding: 15px;
+    line-height: 25px;
+}
+aside>a:hover{
+    color: rgb(251, 255, 0);
+    text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+}
+
+footer {
+    background-color: darkseagreen;
+    text-align: center;
+    padding: 10px;
+}
+
+footer>p{
+    color: forestgreen;
+    font-weight: bolder;
+}

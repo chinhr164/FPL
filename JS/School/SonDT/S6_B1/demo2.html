@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Demo slideshow</h1>
+    <div id="slide">
+        <img src="img/anh1.jpg" width="300" height="200">
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+    </div>
+
+    <!-- Code js -->
+    <script>
+        var imgSlide = document.querySelector('#slide img');
+        // 1. Khai bảo danh sách link ảnh
+        var listImg = [
+            "img/anh1.jpg",
+            "img/anh2.jpg",
+            "img/anh3.jpg"
+        ]
+
+        // 2. Khai báo biến toàn cục: quản lý thời gian và thứ tự ảnh hiện thị
+        var interval = null;
+        var index = 0; //Thứ tự hiện thị ảnh
+
+        // 3. Viết hàm hiện thì ảnh
+        function start() {
+            if (interval == null) {
+                interval = setInterval(function () {
+                    if (index >= listImg.length)
+                        index = 0;
+
+                    imgSlide.src = listImg[index];
+                    index++;
+                }, 1500)
+            }
+        }
+
+        function stop() {
+            if (interval != null) {
+                clearInterval(interval);
+                interval = null;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

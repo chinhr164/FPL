@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            width: 500px;
+            height: 450px;
+            border-radius: 50%;
+            box-shadow: 5px 5px 10px black;
+        }
+    </style>
+    <title>Lab6(1)</title>
+</head>
+
+<body align="center">
+    <img src="img/anh0.jpg" onmouseover="over(this)" onmouseout="out(this)">
+    <h3>Ảnh 1/2</h3>
+
+    <!-- Code JS -->
+    <script>
+        var h3 = document.querySelector('h3');
+        function over(obj) {
+            obj.src = "img/anh1.jpg"
+            h3.innerText = "Ảnh 2/2"
+        }
+        
+        function out(obj) {
+            obj.src = "img/anh0.jpg"
+            h3.innerText = "Ảnh 1/2"
+        }
+    </script>
+</body>
+
+</html>

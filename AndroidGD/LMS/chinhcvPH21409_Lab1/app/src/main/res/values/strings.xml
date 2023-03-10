@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">chinhcvph21409_lab12_01</string>
+    <string name="c">layout_dk_constraint</string>
+    <string name="l">layout_dk_linear</string>
+    <string name="r">layout_dk_relative</string>
+    <string name="g">layout_grid_maytinh</string>
+    <string name="title">Đăng ký</string>
+    <string name="note">Nhanh chóng và dễ dàng</string>
+    <string name="lastname">Họ</string>
+    <string name="firstname">Tên</string>
+    <string name="tel">Số điện thoại hoặc email</string>
+    <string name="password">Mật khẩu mới</string>
+</resources>

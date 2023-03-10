@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/bg"
+        android:duration="0" />
+    <item
+        android:drawable="@drawable/second"
+        android:duration="1000" />
+    <item
+        android:drawable="@drawable/minute"
+        android:duration="60000" />
+    <item
+        android:drawable="@drawable/hour"
+        android:duration="3600000" />
+
+</animation-list>

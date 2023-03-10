@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_Income"
+            android:icon="?android:attr/actionModeFindDrawable"
+            android:title="Thu" />
+        <item
+            android:id="@+id/nav_Expense"
+            android:icon="?android:attr/actionModeFindDrawable"
+            android:title="Chi" />
+        <item
+            android:id="@+id/nav_Statistic"
+            android:icon="?attr/actionModePasteDrawable"
+            android:title="Thống Kê" />
+    </group>
+
+    <item android:title="Comunicate">
+        <menu>
+            <item
+                android:id="@+id/nav_Introduce"
+                android:icon="@android:drawable/ic_dialog_info"
+                android:title="Giới Thiệu" />
+            <item
+                android:id="@+id/nav_Exit"
+                android:icon="?attr/actionModeCloseDrawable"
+                android:title="Thoát" />
+        </menu>
+    </item>
+
+</menu>

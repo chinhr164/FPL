@@ -1,0 +1,16 @@
+.box {
+    line-height: 25px;
+}
+
+.name {
+    width: 200px;
+}
+
+select {
+    width: 350px;
+}
+
+hr {
+    float: left;
+    width: 500px;
+}

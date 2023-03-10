@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Trang chủ</title>
+</head>
+
+<body>
+    <div class="container-fluid ps-3 pe-3">
+        <!-- Menu & Navigation -->
+        <div class="row justify-content-center align-items-center g-2">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <div class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Dashboard</a>
+                    </li>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> Users </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="user.html">User</a></li>
+                                <li><a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Group</a></li>
+                                <li><a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Role</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Product</a></li>
+                                <li><a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Category</a></li>
+                                <li><a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Tag</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Settings</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Banner</a></li>
+                                <li><a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Info</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- My Progress -->
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="modal-title text-center mt-4 mb-3">
+                <h2>My Progress</h2>
+            </div>
+            <hr class="opacity-25">
+        </div>
+
+        <div class="row justify-content-center align-items-center g-2">
+            <ul class="list-group col-md-6 pe-md-3">
+                <li class="list-group-item">Tổng số đơn hàng</li>
+                <li class="list-group-item">Chưa có đơn hàng nào</li>
+            </ul>
+            <ul class="list-group col-md-6 ps-md-3">
+                <li class="list-group-item">Tổng doanh thu</li>
+                <li class="list-group-item">Chưa có khoản thu nào</li>
+            </ul>
+            <ul class="list-group col-12">
+                <li class="list-group-item">Danh sách mặt hàng bán chạy</li>
+                <li class="list-group-item">Chưa có mặt hàng nào</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

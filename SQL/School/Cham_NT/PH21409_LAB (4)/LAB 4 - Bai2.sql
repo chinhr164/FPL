@@ -1,0 +1,97 @@
+CREATE DATABASE QL_SV
+GO
+
+USE QL_SV
+GO
+
+CREATE TABLE LOP_HOC
+(
+    MaLop    varchar(10) NOT NULL,
+    TenLop   nvarchar(50),
+    NienKhoa nvarchar(50),
+)
+
+CREATE TABLE MON_HOC
+(
+    MaMH   varchar(10) NOT NULL,
+    TenMon nvarchar(50),
+    SoTiet int,
+)
+
+CREATE TABLE SINH_VIEN
+(
+    MaSV     varchar(10)  NOT NULL,
+    Ho       nvarchar(10),
+    TenLot   nvarchar(100),
+    Ten      nvarchar(50) NOT NULL,
+    GioiTinh nvarchar(5),
+    NgaySinh date,
+    MaLop    varchar(10)  NOT NULL,
+)
+GO
+
+CREATE TABLE SV_SDT
+(
+    MaSV varchar(10) NOT NULL,
+    SDT  varchar(10) NOT NULL,
+)
+GO
+
+CREATE TABLE THE_SV
+(
+    MaSV      varchar(10) NOT NULL,
+    TenTruong nvarchar(50),
+    TenKhoa   nvarchar(50),
+)
+
+CREATE TABLE DANG_KY
+(
+    MaSV varchar(10) NOT NULL,
+    MaMH varchar(10) NOT NULL,
+    Diem float,
+)
+
+
+-- Thêm khóa chính
+ALTER TABLE LOP_HOC
+    ADD CONSTRAINT LopHoc_PK PRIMARY KEY (MaLop);
+ALTER TABLE MON_HOC
+    ADD CONSTRAINT MonHoc_PK PRIMARY KEY (MaMH);
+ALTER TABLE SINH_VIEN
+    ADD CONSTRAINT SV_PK PRIMARY KEY (MaSV);
+ALTER TABLE SV_SDT
+    ADD CONSTRAINT SV_SDT_PK PRIMARY KEY (MaSV, SDT);
+ALTER TABLE THE_SV
+    ADD CONSTRAINT TheSV_PK PRIMARY KEY (MaSV);
+ALTER TABLE DANG_KY
+    ADD CONSTRAINT DangKy_PK PRIMARY KEY (MaSV, MaMH);
+
+
+-- Thêm khóa ngoại
+ALTER TABLE SINH_VIEN
+    ADD CONSTRAINT SV_FK FOREIGN KEY (MaLop) REFERENCES LOP_HOC (MaLop);
+ALTER TABLE SV_SDT
+    ADD CONSTRAINT SV_SDT_FK FOREIGN KEY (MaSV) REFERENCES SINH_VIEN (MaSV);
+ALTER TABLE THE_SV
+    ADD CONSTRAINT TheSV_FK FOREIGN KEY (MaSV) REFERENCES SINH_VIEN (MaSV);
+ALTER TABLE DANG_KY
+    ADD CONSTRAINT DangKy_FK FOREIGN KEY (MaSV) REFERENCES SINH_VIEN (MaSV);
+ALTER TABLE DANG_KY
+    ADD CONSTRAINT DangKy_FK2 FOREIGN KEY (MaMH) REFERENCES MON_HOC (MaMH);
+
+
+-- Thêm rằng buộc
+ALTER TABLE DANG_KY
+    ADD CONSTRAINT CK_Diem CHECK (Diem >= 0 AND Diem <= 10);
+
+
+-- Thêm xóa và cột
+ALTER TABLE SINH_VIEN
+    ADD EMAIL varchar(30);
+ALTER TABLE SINH_VIEN
+    ADD DiaChi nvarchar(100);
+
+ALTER TABLE SINH_VIEN
+    DROP COLUMN EMAIL;
+ALTER TABLE SINH_VIEN
+    DROP COLUMN DiaChi;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="libs/angular.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sử dụng ng-controller</h1>
+    <div ng-app="zr-app" ng-controller="zr-controller"><br>
+        Họ đệm <input type="text" ng-model="hoDem"><br>
+        Tên <input type="text" ng-model="Ten"><br>
+
+
+
+        <h2>{{hoDem}}</h2>
+        <h2>{{Ten}}</h2>
+        <h2>Điểm {{Diem}} </h2>
+        <h2>Fullname: {{fullname()}}</h2>
+        <h2 ng-bind="fullname()"></h2>
+        <button ng-click="thongtin()">Lấy thông tin</button>
+    </div>
+    <script>
+        var app = angular.module('zr-app', []);
+        app.controller('zr-controller', function ($scope) {
+            // Công việc xử lý ở đây
+
+            // khởi tạo giá trị điền họ tên
+            $scope.hoDem = 'Nhập họ đệm  ...'
+            $scope.Ten = 'Nhập tên ...'
+            $scope.Diem = '1'
+
+            // viết hàm
+            $scope.fullname = function () {
+                return $scope.hoDem + '  ' + $scope.Ten;
+            }
+
+            // Thực hiện hành vi bấm nút
+            $scope.thongtin = function () {
+                var t = this.hoDem + ' ' + this.Ten + ' ' + ', Điểm = ' + this.Diem;
+                alert(t);
+            }
+        })
+    </script>
+</body>
+
+</html>

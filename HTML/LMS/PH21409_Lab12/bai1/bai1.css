@@ -1,0 +1,26 @@
+.container{
+    width: 800px;
+    margin: 0 auto;
+    font-family: Arial;
+}
+
+.container>p{
+    font-size: 25px;
+    font-weight: bold;
+}
+.container>div{
+    margin-bottom: 50px;
+}
+
+img{
+    clear: both;
+    float: left;
+    width: 150px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+h4{
+    color: rgb(0, 162, 255);
+}
+

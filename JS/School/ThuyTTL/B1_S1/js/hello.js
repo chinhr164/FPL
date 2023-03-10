@@ -1,0 +1,1 @@
+document.write("Relation: Single.<br>Blood: O+<br>")

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Lab6(3).css">
+    <style>
+
+    </style>
+    <title>Lab6(3)</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="order" onsubmit="return validate()">
+            <h2>ĐẶT HÀNG</h2>
+            <label>Sản phẩm<input type="text" id="prod"></label>
+            <span id="prod_error"></span>
+
+            <label>Loại
+                <select id="type">
+                    <option></option>
+                    <option>Văn phòng phẩm</option>
+                    <option>Hóa mỹ phẩm</option>
+                    <option>Đồ gia dụng</option>
+                </select>
+            </label>
+            <span id="type_error"></span>
+
+            <label>Đơn giá<input type="text" id="qty"></label>
+            <span id="qty_error"></span>
+
+            <label id="address">Nơi nhận hàng
+                <input type="radio" name="address" onchange="shipPay()">Nội thành
+                <input type="radio" name="address" onchange="shipPay()">Ngoại thành
+            </label>
+            <span id="address_error"></span>
+
+            <label id="shipPay"></label>
+            <hr>
+            <button onclick="validate()">Đặt mua</button>
+        </form>
+    </div>
+
+    <!-- Code JS -->
+    <script>
+        // document.querySelector().style.border
+        // Lấy giá trị từng Input
+        function getValue(obj) {
+            return document.querySelector(obj).value.trim();
+        }
+
+        // Hiện lỗi
+        function showError(obj, mess) {
+            document.querySelector(obj + "_error").innerText = mess;
+        }
+
+        // Xóa lỗi nếu đã đúng
+        function hideError(obj) {
+            document.querySelector(obj + "_error").innerText = "";
+        }
+
+        // Lấy thuộc tính Style
+        function setStyle(obj) {
+            return document.querySelector(obj).style;
+        }
+
+        function validate() {
+            // 1. Sản phẩm
+            var prod = getValue("#prod");
+            if (prod == "" || prod == null) {
+                showError("#prod", "Vui lòng nhập Sản phẩm");
+                setStyle("#prod").border = "1px solid red";
+            } else {
+                hideError("#prod");
+                setStyle("#prod").border = "1px solid black";
+            }
+
+            // 2. Loại
+            var type = getValue("#type");
+            if (type == "" || type == null) {
+                showError("#type", "Vui lòng chọn Loại");
+                setStyle("#type").border = "1px solid red";
+            } else {
+                hideError("#type");
+                setStyle("#type").border = "1px solid black";
+            }
+
+            // 3. Đơn giá
+            var qty = getValue("#qty");
+            var qtyRegex = /^\d+$/;
+            if (qty == "" || qty == null) {
+                showError("#qty", "Vui lòng nhập Đơn giá");
+                setStyle("#qty").border = "1px solid red";
+            } else if (!qtyRegex.test(qty)) {
+                showError("#qty", "Đơn giá không hợp lệ");
+                setStyle("#qty").border = "1px solid red";
+            } else {
+                hideError("#qty");
+                setStyle("#qty").border = "1px solid black";
+            }
+
+            //4. Nơi nhận hàng
+            var address = document.querySelector('#address').children;
+            if (!address[0].checked && !address[1].checked) {
+                showError("#address", "Vui lòng chọn Nơi nhận hàng");
+            } else {
+                hideError("#address");
+            }
+
+
+            if (prod && type && qty && address) {
+                alert("Bạn đã đặt hàng thành công!!!");
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        // Phí vận chuyển
+        function shipPay() {
+            var address = document.querySelector('#address').children;
+            var shipPay = document.querySelector('#shipPay');
+            if (address[1].checked) {
+                shipPay.innerHTML = `Phí vận chuyển<input type="text" value="15000" disabled="true">`
+            }
+            else {
+                shipPay.innerHTML = "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

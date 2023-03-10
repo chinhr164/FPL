@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="18dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:text="ghi file vào Cache"
+        android:onClick="ghiVaoBoNhoCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="đọc từ file Cache"
+        android:onClick="docTUBoNhoCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_margin="18dp"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <Button
+        android:text="ghi file vào bộ nhớ trong"
+        android:onClick="ghiVaoBoNhoTrong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="Đọc từ bộ nhó trong"
+        android:onClick="docTUBoNhoTrong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_margin="18dp"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <Button
+        android:text="Ghi vào Share Preferences"
+        android:onClick="ghiVaoBoNhoSharePre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="Đọc từ Share Preferences"
+        android:onClick="docTuBoNhoSharePre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_margin="18dp"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+
+    <Button
+        android:text="Ghi vào bộ nhớ ngoài"
+        android:onClick="ghiVaoTheNho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="Đọc từ bộ nhớ ngoài"
+        android:onClick="docTuTheNho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_margin="18dp"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+
+
+
+</LinearLayout>

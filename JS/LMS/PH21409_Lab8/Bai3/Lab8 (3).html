@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Lab8 (3).css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="Lab8 (3).js"></script>
+    <title>Lab8 (3)</title>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="filterDemoCtrl">
+        <div class="filter">Show: <input type="number" ng-model="limitRow" min="1" max="6" /></div>
+        <table class="table">
+            <tr>
+                <td>Name</td>
+                <td>Date of Birth</td>
+                <td>Salary</td>
+                <td>Gender</td>
+                <td>Status</td>
+            </tr>
+            <tr ng-repeat="employee in employees | limitTo:limitRow">
+                <td>{{employee.name | uppercase}}</td>
+                <td>{{employee.birthDate | date:"dd/MM/yyyy"}}</td>
+                <td>{{employee.salary | currency:""}}</td>
+                <td>{{employee.gender | lowercase}}</td>
+                <td>{{employee.status | status}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

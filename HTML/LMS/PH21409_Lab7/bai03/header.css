@@ -1,0 +1,101 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-image: url(images/Banner-AP.png);
+    background-size: 100% 100%;
+    height: 400px;
+    position: relative;
+}
+
+.name {
+    margin: 0px;
+    font-variant: small-caps;
+    position: absolute;
+    left: 160px;
+    top: 120px;
+}
+
+.name>.company {
+    font-size: 80px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0px 0px 15px yellow;
+    padding-bottom: 5px;
+}
+
+.name>.solgan {
+    font-size: 40px;
+    color: yellow;
+    opacity: 60%;
+    position: absolute;
+    left: 50px;
+}
+
+.account {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: rgb(255, 51, 0);
+    opacity: 60%;
+    border-bottom-left-radius: 15px;
+}
+
+.account>div {
+    font-variant: small-caps;
+    font-size: 20px;
+    float: left;
+    color: white;
+    padding: 15px;
+
+}
+
+
+.account>div:hover {
+    color: rgb(255, 51, 0);
+    background-color: white;
+    padding: 15px;
+}
+
+.account>.d1:hover {
+    border-bottom-left-radius: 15px;
+}
+
+nav {
+    font-variant: small-caps;
+    font-size: 25px;
+    background-color: orangered;
+    padding: 20px;
+    position: relative;
+}
+
+nav>a {
+    text-decoration: none;
+    text-align: left;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+nav>.lang>a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.lang>.en {
+    position: absolute;
+    top: 0px;
+    right: 170px;
+}
+
+nav a:hover {
+    color: orangered;
+    background-color: white;
+    padding: 20px;
+}

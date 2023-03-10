@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="demo1.css">
+    <title>Bảng</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-gr">
+            <div class="form-ctrl">
+                <label for="">Họ tên</label>
+                <input type="text" id="name">
+            </div>
+            <div class="form-ctrl">
+                <label for="">Username</label>
+                <input type="text" id="username">
+            </div>
+            <div class="form-ctrl">
+                <label for="">Email</label>
+                <input type="email" id="email">
+            </div>
+            <div class="form-ctrl">
+                <label for="">Password</label>
+                <input type="password" id="password">
+            </div>
+            <button onclick="them();">Thêm vào bảng</button>
+        </div>
+        <table border="1" id="bangSP">
+            <thead>
+                <td>Họ tên</td>
+                <td>Username</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>Thao tác</td>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function them() {
+            var name = document.querySelector('#name').value;
+            var user = document.querySelector('#username').value;
+            var email = document.querySelector('#email').value;
+            var pass = document.querySelector('#password').value;
+            var tbody = document.querySelector('#bangSP tbody');
+
+
+            var row = document.createElement('tr');
+
+            var td1 = document.createElement('td');
+            td1.innerHTML = `<span onclick="thongTin()">${name}</span>`;
+            row.appendChild(td1);
+
+            var td2 = document.createElement('td');
+            td2.innerText = user;
+            row.appendChild(td2);
+
+            var td3 = document.createElement('td');
+            td3.innerText = email;
+            row.appendChild(td3);
+
+            var td4 = document.createElement('td');
+            td4.innerText = pass;
+            row.appendChild(td4);
+
+            var td5 = document.createElement('td');
+            td5.innerHTMl = '<button onclick="xoa(this)">Xóa</button>';
+            row.appendChild(td5);
+
+            tbody.appendChild(row);
+        }
+
+        function  xoa(obj){
+            var row = obj.parentNode.parentNode;
+            var tbody = document.querySelector('#bangSP tbody');
+
+            tbody.removeChild(row);
+        }
+        
+        function thongTin(obj){
+            var name = obj.innerText;
+            var username = obj.parentElement.nextElementSibling.innerText;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nội dung thực hành html</h1>
+    <input type="text" onkeyup="capNhat(this)">
+    <p align="center">Đoạn văn</p>
+    <div>Khối văn bản</div>
+
+
+
+    <script>
+        function capNhat(obj){
+            var h1 = document.querySelector('h1');
+
+            h1.innerHTML = obj.value;
+            // h1.innerText = obj.value;
+        }
+
+        // Lấy  thuộc tính của thẻ
+        var p = document.querySelector('p');
+        console.log(p.getAttribute('align')); //Lấy thuộc tính align
+        console.log(p.align);//cách 2
+        p.setAttribute('onclick','đasa');
+    </script>
+</body>
+</html>

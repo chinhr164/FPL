@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66D8D8D8"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".fragment.income.IncomeTypeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/pangolin"
+        android:gravity="center"
+        android:text="Loại Thu"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="50dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/in_t_btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:src="@android:drawable/ic_input_add"
+        app:fabSize="normal"
+        app:tint="@color/white" />
+</RelativeLayout>

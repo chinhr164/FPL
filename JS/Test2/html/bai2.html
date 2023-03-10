@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bai2.css">
+    <script src="/js/bai2.js"></script>
+    <title>Bảng điểm</title>
+</head>
+
+<body onload="table()">
+    <div class="box">
+        <label>Lọc theo</label>
+        <input type="radio" name="mark" value="1" onchange="color()">Điểm Đỗ
+        <input type="radio" name="mark" value="2" onchange="color()">Điểm Trượt
+        <table border="1">
+            <thead>
+                <th>STT</th>
+                <th colspan="2">Họ và tên</th>
+                <th>Điểm JS1</th>
+                <th>Điểm JS2</th>
+                <th>Điểm TB</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Nguyễn Văn</td>
+                    <td>Bình</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Vũ Thị</td>
+                    <td>Hạnh</td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Trần Văn</td>
+                    <td>Bình</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

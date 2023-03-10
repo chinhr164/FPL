@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        android:padding="15dp"
+        android:text="Total Product"
+        android:textSize="20dp" />
+
+
+    <EditText
+        android:id="@+id/PH21409_dA_CP17306"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="10dp"
+        android:padding="3dp" />
+
+
+    <EditText
+        android:id="@+id/PH21409_dB_CP17306"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="10dp"
+        android:padding="3dp" />
+
+
+    <Button
+        android:id="@+id/PH21409_dBtn_CP17306"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="10dp"
+        android:text="Lưu lớp" />
+
+    <TextView
+        android:id="@+id/PH21409_dTV_CP17306"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="10dp"
+        android:padding="10dp"
+        android:textSize="30dp"
+        android:text="Kết quả"
+        android:textAlignment="center" />
+
+
+</LinearLayout>

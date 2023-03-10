@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 50px auto; 
+    width: 250px;
+    height: 150px;
+    border: 1px solid red;
+    padding: 10px;
+}

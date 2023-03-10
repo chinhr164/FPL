@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java-Swing.iml" filepath="$PROJECT_DIR$/.idea/Java-Swing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/New Folder/LinhTD/LinhTD.iml" filepath="$PROJECT_DIR$/New Folder/LinhTD/LinhTD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/New Folder/PH21409/PH21409.iml" filepath="$PROJECT_DIR$/New Folder/PH21409/PH21409.iml" />
+      <module fileurl="file://$PROJECT_DIR$/School/School.iml" filepath="$PROJECT_DIR$/School/School.iml" />
+      <module fileurl="file://$PROJECT_DIR$/School/src/School1.iml" filepath="$PROJECT_DIR$/School/src/School1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TITV/TITV_79/TITV_79.iml" filepath="$PROJECT_DIR$/TITV/TITV_79/TITV_79.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TITV/TiTV_59_Enum/TiTV_59_Enum.iml" filepath="$PROJECT_DIR$/TITV/TiTV_59_Enum/TiTV_59_Enum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TITV/TiTV_67-76_File/TiTV_67-76_File.iml" filepath="$PROJECT_DIR$/TITV/TiTV_67-76_File/TiTV_67-76_File.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TITV/TiTV_78/TiTV_78.iml" filepath="$PROJECT_DIR$/TITV/TiTV_78/TiTV_78.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TITV/TiTV_80/TiTV_80.iml" filepath="$PROJECT_DIR$/TITV/TiTV_80/TiTV_80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TITV/TiTV_81/TiTV_81.iml" filepath="$PROJECT_DIR$/TITV/TiTV_81/TiTV_81.iml" />
+    </modules>
+  </component>
+</project>

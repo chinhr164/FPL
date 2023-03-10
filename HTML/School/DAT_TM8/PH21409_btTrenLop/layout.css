@@ -1,0 +1,86 @@
+.box {
+    margin: 0px auto;
+    width: 1000px;
+    font-size: 20px;
+}
+
+header {
+    height: 180px;
+    background: #FFBA00;
+    border-right: 2px solid #000000;
+    border-left: 2px solid #000000;
+    border-top: 2px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+nav {
+    background: #009A50;
+    height: 80px;
+    border-right: 2px solid #000000;
+    border-left: 2px solid #000000;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.a1, .a2, .a3, .a4, .a5 {
+    height: 150px;
+}
+
+.a1 {
+    float: left;
+    width: 197px;
+    border-left: 2px solid #000000;
+    border-top: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+
+}
+
+.a2 {
+    width: 598px;
+    float: left;
+    background: #FF1900;
+    padding: 0px;
+    border: 1px solid #000000;
+}
+
+.a3 {
+    float: right;
+    width: 197px;
+    border-right: 2px solid #000000;
+    border-left: 1px solid #000000;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.a4 {
+    background: #FFBA00;
+    width: 497px;
+    clear: both;
+    float: left;
+    border-right: 1px solid #000000;
+    border-left: 2px solid #000000;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.a5 {
+    background: #009A50;
+    width: 497px;
+    float: right;
+    border-right: 2px solid #000000;
+    border-left: 1px solid #000000;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+footer {
+    height: 40px;
+    background: blue;
+    clear: both;
+    color: white;
+    border-right: 2px solid #000000;
+    border-left: 2px solid #000000;
+    border-top: 1px solid #000000;
+    border-bottom: 2px solid #000000;
+}

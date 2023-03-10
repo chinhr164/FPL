@@ -1,0 +1,28 @@
+<!-- tạo mảng ngẫu nhiên 10 pt - hiển thị và tính tổng các số không chia hết cho 7 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var mang = new Array();
+        var s = 0;
+        document.write("Các số trong mảng không chia hết cho 7:<br>");
+        for (var i = 0; i < 10; i++) {
+            mang[i] = Math.round(10 + Math.random() * 90);
+            if (mang[i] % 7 != 0) {
+                document.write(mang[i] + "   ");
+                s += mang[i];
+            }
+        }
+        document.write("<br>Tổng các số trong mảng không chia hết cho 7: "+s);
+    </script>
+</body>
+
+</html>

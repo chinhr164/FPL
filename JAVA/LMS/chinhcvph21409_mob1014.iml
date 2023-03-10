@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/CHINH_PH21409_ASSIGNMENT" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CHINH_PH21409_LAB(1)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CHINH_PH21409_LAB(2)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CHINH_PH21409_LAB(3)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CHINH_PH21409_LAB(4)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CHINH_PH21409_LAB(5)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CHINH_PH21409_LAB(6)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CHINH_PH21409_LAB(7)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CHINH_PH21409_LAB(8)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CHINH_PH21409_TESTASS1 (08.02.2022)" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="CHINH_PH21409_LAB(3)" />
+    <orderEntry type="module" module-name="CHINH_PH21409_LAB(4)" />
+    <orderEntry type="module" module-name="CHINH_PH21409_LAB(6)" />
+    <orderEntry type="module" module-name="CODE" />
+  </component>
+</module>

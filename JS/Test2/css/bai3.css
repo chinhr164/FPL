@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+img{
+    display: block;    
+    width: 500px;
+    height: 400px;
+    margin: 10px auto;
+}
+
+button{
+    border: 1px solid #ccc;
+    background-color: beige;
+    padding: 3px;
+    width: 50px;
+}
+
+button:hover{
+    box-shadow: 2px 2px 2px black;
+}

@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+td:first-child {
+    width: 150px;
+}
+
+td:nth-child(2) {
+    width: 40px;
+}

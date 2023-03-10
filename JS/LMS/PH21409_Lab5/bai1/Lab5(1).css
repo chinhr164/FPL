@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 500px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: rgba(118, 255, 225, 0.349);
+    padding: 10px;
+}
+
+
+h1 {
+    text-align: center;
+    text-shadow: 0 0 5px red;
+}
+
+hr {
+    width: 250px;
+}
+
+.form-group{
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+#nameP{
+    font-size: 18px;
+}
+
+#qty{
+    height: 15px;
+    padding: 2px;
+    margin: 0 5px;
+}
+
+h2{
+    margin-left: 10px;
+}

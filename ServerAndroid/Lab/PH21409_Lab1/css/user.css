@@ -1,0 +1,28 @@
+hr.opacity-10 {
+    opacity: 0.1;
+}
+
+h8 {
+    font-size: 14px;
+}
+
+/* Navigation */
+li.nav-item {
+    cursor: pointer;
+}
+
+ul.dropdown-menu {
+    box-shadow: 2px 2px 5px gray;
+}
+
+li:focus>a.dropdown-item,
+li:hover>a.dropdown-item {
+    color: white;
+    background-color: red;
+}
+
+/* IMG */
+.img:after{
+    content: url('../img/sort.png');
+    position: absolute;
+}   

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bai2.css">
+    <script src="/libs/angular.min.js"></script>
+    <script src="/js/bai2.js"></script>
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="box" ng-app="zr" ng-controller="zr">
+        <h2>Hóa đơn</h2>
+        <form ng-submit="validate()">
+            <div class="form-gr">
+                <label for="">Khách hàng <span style="display: inline-block;">(*)</span></label>
+                <input type="text" ng-model="name">
+                <span>{{name_error}}</span>
+            </div>
+            <div class="form-gr">
+                <label for="">Loại hàng <span style="display: inline-block;">(*)</span></label>
+                <select ng-model="style" ng-change="pay()">
+                    <option value="">Chọn loại hàng</option>
+                    <option value="1">Loại 1</option>
+                    <option value="2">Loại 2</option>
+                    <option value="3">Loại 3</option>
+                </select>
+                <span>{{style_error}}</span>
+            </div>
+            <div class="form-gr">
+                <label for="">Đơn giá</label>
+                <input type="text" ng-model="price" disabled>
+            </div>
+            <div class="form-gr">
+                <label for="">Số lượng <span style="display: inline-block;">(*)</span></label>
+                <input type="number" ng-model="qty" ng-change="pay()">
+                <span>{{qty_error}}</span>
+            </div>
+            <div class="form-gr">
+                <label for="">Thành tiền</label>
+                <input type="text" ng-model="total" disabled>
+            </div>
+            <div class="form-gr">
+                <label for="">Nơi nhận hàng <span style="display: inline-block;">(*)</span></label>
+                <input type="radio" ng-model="address" value="0"> Nội thành
+                <input type="radio" ng-model="address" value="1"> Ngoại thành                
+                <span>{{address_error}}</span>
+            </div>
+            <div class="form-gr" ng-show="check()">
+                <label for="">Phí vận chuyển</label>
+                <input type="text" value="30000" disabled>
+            </div>
+            <button>Đặt mua</button>
+        </form>
+    </div>
+</body>
+
+</html>
