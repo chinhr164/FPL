@@ -1,0 +1,97 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" style="width: 5%;" data-bs-toggle="modal" data-bs-target="#addModal">
+  <i class="fas fa-plus"></i> Tạo
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center col-11 ps-5" id="modalTitleId">
+          <b class=""><i class="fas fa-splotch fs-6"></i> THÊM NHÂN VIÊN <i class="fas fa-splotch fs-6"></i></b>
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form method="post">
+        <div class="modal-body">
+          <div class="container-fluid">
+
+            <input type="hidden" name="type" value="add">
+            <div class="mb-3">
+              <label for="" class="form-label">Mã NV</label>
+              <input type="text" class="form-control" name="id" placeholder="S01" id="" value="" required />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Họ tên</label>
+              <input type="text" class="form-control" name="fullname" placeholder="Nguyễn Văn An" id="" value="" required />
+            </div>
+            <div class="col-md-1 mb-md-3"></div>
+            <div class="mb-3">
+              <label for="" class="form-label">Tên người dùng</label>
+              <input type="text" class="form-control" name="username" id="" value="" required placeholder="admin" />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Mật khẩu</label>
+              <input type="text" class="form-control" name="password" id="" placeholder="" />
+              <small id="emailHelpId" class="form-text text-muted">Mật khẩu phải chứa ít nhất tám ký tự,
+                bao gồm ít nhất 1 chữ hoa, 1 chữ thường, 1 chữ cái và 1 số.</small>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" id="" aria-describedby="emailHelpId" placeholder="abc@example.com" />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Cơ sở</label>
+              <select class="form-select" name="outlet" id="">
+                <% listO.forEach((obj) => { %>
+                <option value="<%= obj._id %>"><%= obj.outletID %></option>
+                <% }) %>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Nhiệm vụ</label>
+              <div class="list-group">
+                <label class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" name="role" value="Founder">
+                  Founder
+                </label>
+                <label class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" name="role" value="Developer">
+                  Developer
+                </label>
+                <label class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" name="role" value="Baker">
+                  Baker
+                </label>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Số điện thoại</label>
+              <input type="text" class="form-control" name="tel" id="" value="">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-success">Tạo</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  var modalId = document.getElementById("modalId");
+
+  modalId.addEventListener("show.bs.modal", function(event) {
+    // Button that triggered the modal
+    let button = event.relatedTarget;
+    // Extract info from data-bs-* attributes
+    let recipient = button.getAttribute("data-bs-whatever");
+
+    // Use above variables to manipulate the DOM
+  });
+</script>

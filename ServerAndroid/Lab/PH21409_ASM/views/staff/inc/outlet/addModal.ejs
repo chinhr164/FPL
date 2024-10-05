@@ -1,0 +1,65 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" style="width: 5%;" data-bs-toggle="modal" data-bs-target="#addModal">
+  <i class="fas fa-plus"></i> Tạo
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center col-11 ps-5" id="modalTitleId">
+          <b class=""><i class="fas fa-splotch fs-6"></i> THÊM CƠ SỞ <i class="fas fa-splotch fs-6"></i></b>
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="/outlets" method="post">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <input type="hidden" name="type" value="add">
+            <div class="mb-3">
+              <label for="" class="form-label">Mã CS</label>
+              <input type="text" class="form-control" placeholder="" name="id" required />
+            </div>
+            <div class="col-md-1 mb-md-3"></div>
+            <div class="mb-3">
+              <label for="" class="form-label">Tên CS</label>
+              <input type="text" class="form-control" name="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Ngày mở cửa</label>
+              <input type="text" class="form-control" name="date" required />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Số điện thoại</label>
+              <input type="text" class="form-control" name="tel" required />
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Địa chỉ</label>
+              <input type="text" class="form-control" name="address" required />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="submit" class="btn btn-success">Tạo</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  var modalId = document.getElementById("modalId");
+
+  modalId.addEventListener("show.bs.modal", function(event) {
+    // Button that triggered the modal
+    let button = event.relatedTarget;
+    // Extract info from data-bs-* attributes
+    let recipient = button.getAttribute("data-bs-whatever");
+
+    // Use above variables to manipulate the DOM
+  });
+</script>

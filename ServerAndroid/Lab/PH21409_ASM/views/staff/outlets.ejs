@@ -1,0 +1,123 @@
+<%- include('../inc/top.ejs') %>
+
+<div class="container-fluid px-3">
+  <div class="row align-items-center g-2">
+    <div class="modal-title mt-4 mb-3 col-md-2 col-4 text-start">
+      <h2>
+        <%= title %>
+      </h2>
+    </div>
+
+    <!-- Add staff button -->
+    <%- include('./inc/outlet/addModal.ejs') %>
+
+    <hr class="opacity-10" />
+  </div>
+
+  <!-- Table -->
+
+  <!-- Data -->
+  <div class="row g-2">
+    <table id="outletTable" class="ui celled table" style="width: 100%">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Mã CS</th>
+          <th>Tên CS</th>
+          <th>Ngày mở cửa</th>
+          <th>Số điện thoại</th>
+          <th>Địa chỉ</th>
+        </tr>
+      </thead>
+      <tfoot style="display: table-header-group;">
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <% listO.forEach((obj,index)=> { -%>
+        <tr>
+          <td>
+            <%= index+1 %>
+          </td>
+          <td>
+            <a href="#updateModal<%= obj.outletID %>" data-bs-toggle="modal" style="text-decoration: none;"><%= obj.outletID %></a>
+          </td>
+          <td>
+            <%= obj.name %>
+          </td>
+          <td>
+            <%= obj.openingDate %>
+          </td>
+          <td>
+            <%= obj.tel %>
+          </td>
+          <td>
+            <%= obj.address %>
+          </td>
+        </tr>
+
+        <div class="modal fade" id="updateModal<%= obj.outletID %>" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-center col-11 ps-5" id="modalTitleId">
+                  <b class=""><i class="fas fa-splotch fs-6"></i> CẬP NHẬT CỞ SỞ <i class="fas fa-splotch fs-6"></i></b>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form method="post">
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <input type="hidden" name="type" value="update">
+                    <div class="mb-3">
+                      <label for="" class="form-label">Mã CS</label>
+                      <input type="hidden" class="form-control" placeholder="" name="id" value="<%= obj._id %>" />
+                      <input type="hidden" class="form-control" placeholder="" name="oID" value="<%= obj.outletID %>" />
+                      <input type="text" class="form-control" placeholder="" value="<%= obj.outletID %>" required disabled />
+                    </div>
+                    <div class="col-md-1 mb-md-3"></div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Tên CS</label>
+                      <input type="text" class="form-control" name="name" value="<%= obj.name %>" required />
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Ngày mở cửa</label>
+                      <input type="text" class="form-control" name="date" value="<%= obj.openingDate %>" required />
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Số điện thoại</label>
+                      <input type="text" class="form-control" name="tel" value="<%= obj.tel %>" required />
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Địa chỉ</label>
+                      <input type="text" class="form-control" name="address" value="<%= obj.address %>" required />
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center pe-6">
+                  <button type="submit" class="btn btn-warning">Sửa</button>
+                </div>
+              </form>
+              <form method="post">
+                <input type="hidden" name="type" value="delete">
+                <input type="hidden" name="oID" value="<%= obj.outletID %>">
+                <button type="submit" class="btn btn-primary col-1 position-absolute" onclick="return confirm('Chắc chắn muốn xóa?')" style="bottom: 12px; left: 50%;">Xóa</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <%_ }) -%>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<%- include('../inc/bottom.ejs') %>

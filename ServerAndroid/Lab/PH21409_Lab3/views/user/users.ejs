@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/cdn/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="/cdn/datatables/css/dataTables.bootstrap5.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/cdn/datatables/css/dataTables.semanticui.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/user.css" />
+    <title>User</title>
+  </head>
+
+  <body>
+    <div class="container-fluid ps-3 pe-3">
+      <!-- Menu & Navigation -->
+      <div class="row justify-content-center align-items-center g-2">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+          <div class="navbar-nav me-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Dashboard</a>
+            </li>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                  Users
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="users">User</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href=""
+                      onClick='alert("Chức năng đang phát triển")'
+                      >Group</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href=""
+                      onClick='alert("Chức năng đang phát triển")'
+                      >Role</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                  >Products</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href=""
+                      onClick='alert("Chức năng đang phát triển")'
+                      >Product</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href=""
+                      onClick='alert("Chức năng đang phát triển")'
+                      >Category</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href=""
+                      onClick='alert("Chức năng đang phát triển")'
+                      >Tag</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                  >Settings</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href=""
+                      onClick='alert("Chức năng đang phát triển")'
+                      >Banner</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href=""
+                      onClick='alert("Chức năng đang phát triển")'
+                      >Info</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="nav-item dropdown text-end">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <%= title %>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href=""
+                    onClick='alert("Chức năng đang phát triển")'
+                    >Edit Profile</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href=""
+                    onClick='alert("Chức năng đang phát triển")'
+                    >Edit Profile Picture</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href=""
+                    onClick='alert("Chức năng đang phát triển")'
+                    >Change Password</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="row align-items-center g-2">
+        <div class="modal-title mt-4 mb-3 col-md-10 col-8 text-start">
+          <h2>List User - Thay đổi search và chọn số lượng item để phù hợp với online</h2>
+        </div>
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-danger mt-4 mb-3 col-md-2 col-4"
+          data-bs-toggle="modal"
+          data-bs-target="#modalId"
+        >
+          Add user
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="modalId"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="modalTitleId"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-center col-11" id="modalTitleId">
+                  Add user
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="col-md-4 mb-3">
+                    <label for="" class="form-label">Full name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      value=""
+                      required
+                    />
+                  </div>
+                  <div class="col-md-1 mb-md-3"></div>
+                  <div class="col-md-4 mb-3">
+                    <label for="" class="form-label">Username</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      value=""
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      name=""
+                      id=""
+                      placeholder=""
+                    />
+                    <small id="emailHelpId" class="form-text text-muted"
+                      >Passwords must contain at least eight characters,
+                      including at least 1 letter and 1 number.</small
+                    >
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name=""
+                      id=""
+                      aria-describedby="emailHelpId"
+                      placeholder="abc@example.com"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Group</label>
+                    <select class="form-select" name="" id="">
+                      <option selected>Select one</option>
+                      <option value="">D1</option>
+                      <option value="">D2</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Status</label>
+                    <div class="form-control" id="gender">
+                      <label
+                        ><input type="radio" id="1" name="status" />
+                        Active</label
+                      >
+                      <label></label>
+                      <label
+                        ><input type="radio" name="status" /> Disable</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-success">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var modalId = document.getElementById("modalId");
+
+          modalId.addEventListener("show.bs.modal", function (event) {
+            // Button that triggered the modal
+            let button = event.relatedTarget;
+            // Extract info from data-bs-* attributes
+            let recipient = button.getAttribute("data-bs-whatever");
+
+            // Use above variables to manipulate the DOM
+          });
+        </script>
+        <hr class="opacity-25" />
+      </div>
+
+      <!-- Table -->
+
+      <!-- Data -->
+      <div class="row g-2">
+        <table id="example" class="ui celled table" style="width: 100%">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Fullname</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Group</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>Cao Văn Chỉnh</td>
+              <td>chinhr164</td>
+              <td>chinhr164@gmail.com</td>
+              <td>D1</td>
+              <td>Active</td>
+              <th></th>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Đinh Viết Khang</td>
+              <td>khangloong</td>
+              <td>khangloong@gmail.com</td>
+              <td>D2</td>
+              <td>Disable</td>
+              <th></th>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Ngô Trung Hiếu</td>
+              <td>hieunt1812</td>
+              <td>hieunt1812@gmail.com</td>
+              <td>D2</td>
+              <td>Active</td>
+              <th></th>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Nguyễn Văn Bắc</td>
+              <td>bacnv</td>
+              <td>bacnv@gmail.com</td>
+              <td>D1</td>
+              <td>Disable</td>
+              <th></th>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Đỗ Xuân Hiếu</td>
+              <td>hieudeptrai102</td>
+              <td>hieudeptrai102@gmail.com</td>
+              <td>D1</td>
+              <td>Disable</td>
+              <th></th>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Nguyễn Văn Sáng</td>
+              <td>sangnv</td>
+              <td>sangnv@gmail.com</td>
+              <td>D2</td>
+              <td>Disable</td>
+              <th></th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- JS Boostrap -->
+    <script src="/cdn/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/cdn/jQuery/jquery-3.6.0.js"></script>
+    <script src="/cdn/datatables/js/jquery.dataTables.js"></script>
+    <script src="/cdn/datatables/js/dataTables.bootstrap5.js"></script>
+
+    <!-- JS Custom -->
+    <script src="/javascripts/user.js"></script>
+  </body>
+</html>

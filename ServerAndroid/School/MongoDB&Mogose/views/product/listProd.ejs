@@ -1,0 +1,44 @@
+<%- include('../inc/header.ejs') %>
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">sku</th>
+                    <th scope="col">name</th>
+                    <th scope="col">tag</th>
+                    <th scope="col">category</th>
+                    <th scope="col">price</th>
+                    <th scope="col">qty</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% listProd.forEach((obj)=> { %>
+                    <tr>
+                        <td><a href="/product/edit/<%= obj.sku %>">
+                                <%= obj.sku %>
+                            </a></td>
+                        <td>
+                            <%= obj.name %>
+                        </td>
+                        <td>
+                            <%= obj.tag %>
+                        </td>
+                        <td>
+                            <%= obj.category.name %>
+                        </td>
+                        <td>
+                            <%= obj.price %>
+                        </td>
+                        <td>
+                            <%= obj.qty %>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <%- include('../inc/footer.ejs') %>

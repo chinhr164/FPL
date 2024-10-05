@@ -1,0 +1,13 @@
+<%- include('../inc/header.ejs') %>
+<form class="mb-3" action="add" method="post" enctype="multipart/form-data">
+  <label for="" class="form-label">Choose file</label>
+  <input
+    type="file"
+    class="form-control"
+    name="img"
+    aria-describedby="fileHelpId"
+  />
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<%- include('../inc/footer.ejs') %>

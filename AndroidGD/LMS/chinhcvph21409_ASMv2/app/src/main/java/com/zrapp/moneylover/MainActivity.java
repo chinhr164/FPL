@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         fm = getSupportFragmentManager();
-        fm.beginTransaction().replace(R.id.frameContent,new StatisticFragment()).commit();
+        fm.beginTransaction().replace(R.id.frameContent, new StatisticFragment()).commit();
 
         navigationView = findViewById(R.id.nav_menu);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

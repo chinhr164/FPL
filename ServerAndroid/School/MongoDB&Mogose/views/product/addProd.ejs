@@ -1,0 +1,45 @@
+<%- include('../inc/header.ejs') %>
+  <h2 class="d-flex justify-content-center mb-3">
+    Thông tin sản phẩm
+  </h2>
+  <form action="add" method="post" style="width: 50%;">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" name="sku" id="formId1" placeholder="SKU">
+      <label for="formId1">SKU</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" name="name" id="formId1" placeholder="Name">
+      <label for="formId1">Name</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" name="tag" id="formId1" placeholder="Tag">
+      <label for="formId1">Tag</label>
+    </div>
+    <div class="mb-3">
+      <select class="form-select form-select-lg" name="category" id="">
+        <option selected>Category</option>
+        <% listCat.forEach(element=> { %>
+          <option value="<%= element._id %>">
+            <%= element.name %>
+          </option>
+          <% }) %>
+      </select>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" name="price" id="formId1" placeholder="Price">
+      <label for="formId1">Price</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" name="qty" id="formId1" placeholder="Qty">
+      <label for="formId1">Qty</label>
+    </div>
+    <% if (msg.length>0) { %>
+      <h6 class="alert">
+        <%= msg %>
+      </h6>
+      <% } %>
+        <button style="margin: 0 auto;" type="submit" class="btn btn-primary">SAVE</button>
+  </form>
+
+
+  <%- include('../inc/footer.ejs') %>

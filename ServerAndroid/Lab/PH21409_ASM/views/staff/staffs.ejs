@@ -1,0 +1,178 @@
+<%- include('../inc/top.ejs') %>
+
+<div class="container-fluid px-3">
+  <div class="row align-items-center g-2">
+    <div class="modal-title mt-4 mb-3 col-md-2 col-4 text-start">
+      <h2>
+        <%= title %>
+      </h2>
+    </div>
+
+    <!-- Add staff button -->
+    <%- include('./inc/staff/addModal.ejs',{listO:listO}) %>
+    <hr class="opacity-10" />
+  </div>
+
+  <!-- Table -->
+
+  <!-- Data -->
+  <div class="row g-2">
+    <table id="staffTable" class="ui celled table" style="width: 100%">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Mã NV</th>
+          <th>Họ tên</th>
+          <th>Vai trò</th>
+          <th>Cơ sở</th>
+          <th>Số điện thoại</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tfoot style="display: table-header-group;">
+        <th></th>
+        <th>Mã NV</th>
+        <th>Họ tên</th>
+        <th>Vai trò</th>
+        <th>Cơ sở</th>
+        <th>Số điện thoại</th>
+        <th>Email</th>
+      </tfoot>
+      <tbody>
+        <% listS.forEach((obj,index) => { %>
+        <tr>
+          <td><%= index+1 %></td>
+          <td>
+            <a href="#detailModal<%= obj.staffID %>" data-bs-toggle="modal" style="text-decoration: none;"><%= obj.staffID %></a>
+          </td>
+          <td><%= obj.fullname %></td>
+          <td><%= obj.role%></td>
+          <td><%= obj.outlet.outletID %></td>
+          <td><%= obj.tel %></td>
+          <td><%= obj.email %></td>
+        </tr>
+
+        <!-- Detail Modal -->
+        <div class="modal fade" id="detailModal<%= obj.staffID %>" tabindex="-1" role="" aria-labelledby="modalTitleId" aria-hidden="true">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content ">
+              <div class="modal-body">
+                <div class="row justify-content-center align-items-center px-3">
+                  <div class="row d-flex justify-content-center align-items-center">
+                    <div class="card border-0 text-center my-3">
+                      <div class="">
+                        <img src="/images/brand/logoH'Patisserie_big.png" class="img-fluid" style="width: 40px;" />
+                      </div>
+                      <div class="mt-3 mb-5">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp" class="rounded-circle img-fluid" style="width: 100px;" />
+                      </div>
+                      <h4 class="mb-2 text-uppercase"><%= obj.fullname %></h4>
+                      <h6 class="my-2"><%= obj.role %></h6>
+                      <h1 class="my-4 fw-bold text-primary" style="font-size: 70px;"><%= obj.staffID %></h1>
+                      <h6 class="my-2"><%= obj.tel %></h6>
+                      <h6 class="mb-2"><%= obj.email %></h6>
+                      <div class="text-success px-5">
+                        <hr>
+                      </div>
+                      <h6 class="mb-2"><a href="" onclick="alert('Trang web đang phát triển')">hpatisserie.com.vn</a></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                <form method="post">
+                  <input type="hidden" name="type" value="delete">
+                  <input type="hidden" name="sID" value="<%= obj.staffID %>">
+                  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#updateModal<%= obj.staffID %>">Sửa</button>
+                  <button type="submit" class="btn btn-primary" onclick="return confirm('Chắc chắn muốn xóa?')" data-bs-dismiss="modal">Xóa</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Update model -->
+        <div class="modal fade" id="updateModal<%= obj.staffID %>" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-center col-11 ps-5" id="modalTitleId">
+                  <b class=""><i class="fas fa-splotch fs-6"></i> CẬP NHẬT NHÂN VIÊN <i class="fas fa-splotch fs-6"></i></b>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form method="post">
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <input type="hidden" name="type" value="update">
+                    <div class="mb-3">
+                      <label for="" class="form-label">Mã NV</label>
+                      <input type="hidden" class="form-control" name="id" value="<%= obj._id %>" />
+                      <input type="hidden" class="form-control" name="sID" value="<%= obj.staffID %>" />
+                      <input type="text" class="form-control" value="<%= obj.staffID %>" disabled />
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Họ tên</label>
+                      <input type="text" class="form-control" name="fullname" value="<%= obj.fullname %>" />
+                    </div>
+                    <div class="col-md-1 mb-md-3"></div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Tên người dùng</label>
+                      <input type="text" class="form-control" name="username" value="<%= obj.username %>" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Mật khẩu</label>
+                      <input type="text" class="form-control" name="password" value="<%= obj.password %>" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Email</label>
+                      <input type="email" class="form-control" name="email" aria-describedby="emailHelpId" value="<%= obj.email %>" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Cơ sở</label>
+                      <select class="form-select" name="outlet" id="">
+                        <% listO.forEach((item) => { 
+                          let selected = ''
+                          if(String(item.outletID) == String(obj.outlet.outletID))
+                            {selected = ' selected'} %>
+                        <option <%= selected %> value="<%= item._id %>"><%= item.outletID %></option>
+                        <% }) %>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Nhiệm vụ</label>
+                      <div class="list-group">
+                        <% listR.forEach((item) => { 
+                          let checked = ''
+                          if(obj.role.search(item.name)!=-1)
+                            {checked = ' checked'} %>
+                        <label class="list-group-item">
+                          <input class="form-check-input me-1" <%= checked %> type="checkbox" name="role" value="<%= item.name %>">
+                          <%= item.name %>
+                        </label>
+                        <% }) %>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Số điện thoại</label>
+                      <input type="text" class="form-control" name="tel" value="<%= obj.tel %>">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                  </button>
+                  <button type="submit" class="btn btn-success">Sửa</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<%- include('../inc/bottom.ejs') %>

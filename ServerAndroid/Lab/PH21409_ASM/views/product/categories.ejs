@@ -1,0 +1,54 @@
+<%- include('../inc/top.ejs') %>
+
+<div class="container-fluid px-3">
+  <div class="row align-items-center g-2">
+    <div class="modal-title mt-4 mb-3 col-md-2 col-4 text-start">
+      <h2><%= title %></h2>
+    </div>
+
+    <!-- Add staff button -->
+    <%- include('./inc/category/addModal.ejs') %>
+
+    <hr class="opacity-10" />
+  </div>
+
+  <!-- Table -->
+
+  <!-- Data -->
+  <div class="row g-2 d-flex px-5">
+    <table id="catTable" class="ui celled table mx-auto" style="width: 100%">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Thể loại</th>
+          <th>Ngày khởi tạo</th>
+          <th class="text-center">Tác vụ</th>
+        </tr>
+      </thead>
+      <tfoot style="display: table-header-group;">
+        <th>
+        <th>Vai trò</th>
+        <th>Ngày khởi tạo</th>
+        <th></th>
+      </tfoot>
+      <tbody>
+        <% listC.forEach((item,index) => { %>
+          <tr>
+            <td><%= index+1 %></td>
+            <td><%= item.name %></td>
+            <td><%= item.creationDate %></td>
+            <form method="post">
+              <input type="hidden" name="type" value="delete">
+              <input type="hidden" name="name" value="<%= item.name %>">
+              <td class="text-center pe-4">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-trash-can"></i></button>
+              </td>
+            </form>
+          </tr>
+          <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<%- include('../inc/bottom.ejs') %>

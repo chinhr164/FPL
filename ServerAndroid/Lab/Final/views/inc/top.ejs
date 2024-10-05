@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/cdn/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/cdn/datatables/css/dataTables.bootstrap5.css" />
+  <link rel="stylesheet" href="/cdn/datatables/css/dataTables.semanticui.css" />
+  <link rel="stylesheet" href="/stylesheets/signin.css" />
+  <link rel="shortcut icon" href="/images/brand/logoH'Patisserie.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/cb34670699.js" crossorigin="anonymous"></script>
+  <title>
+    <%= title %>
+  </title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!-- Menu & Navigation -->
+    <div class="row justify-content-center align-items-center mb-4">
+      <nav class="navbar py-0 navbar-expand-sm navbar-light bg-light px-3">
+        <div class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">H'Patisserie</a>
+          </li>
+        </div>
+        <div class="nav-item dropdown me-3 d-sm-none">
+          <a class="nav-link dropdown" href="" data-bs-toggle="dropdown">
+            <%= user %>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-p">
+            <li>
+              <a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Edit Profile</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Edit Profile Picture</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Change Password</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="/signin">Sign out</a></li>
+          </ul>
+        </div>
+        <button class="navbar-toggler small" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon small"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown" href="" data-bs-toggle="dropdown">
+                Memo
+              </a>
+              <ul class="dropdown-menu shadow-p">
+                <li><a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Recipe</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown" href="" data-bs-toggle="dropdown">
+                Staffs
+              </a>
+              <ul class="dropdown-menu shadow-p">
+                <li><a class="dropdown-item" href="staffs">List Staff</a></li>
+                <li>
+                  <a class="dropdown-item" href="outlets">Outlet</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="roles">Role</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown" href="" data-bs-toggle="dropdown">Products</a>
+              <ul class="dropdown-menu shadow-p">
+                <li>
+                  <a class="dropdown-item" href="products">List Product</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="categories">Category</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Tag</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+        <div class="nav-item dropdown text-md-end d-none d-md-block">
+          <a class="nav-link dropdown" href="" data-bs-toggle="dropdown">
+            <%= user %>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-p">
+            <li>
+              <a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Edit Profile</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Edit Profile Picture</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="" onClick='alert("Chức năng đang phát triển")'>Change Password</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="/signin">Sign out</a></li>
+            <!-- <li><input type="submit">Sign out</li> -->
+          </ul>
+        </div>
+      </nav>
+    </div>

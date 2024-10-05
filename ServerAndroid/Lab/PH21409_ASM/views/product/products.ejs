@@ -1,0 +1,190 @@
+<%- include('../inc/top.ejs') %>
+
+  <div class="container-fluid px-3">
+    <div class="row align-items-center g-2">
+      <div class="modal-title mt-4 mb-3 me-0 col-md-2 col-4 text-start">
+        <h2><%= title %></h2>
+      </div>
+
+      <!-- Add staff button -->
+      <%- include('./inc/product/addModal.ejs') %>
+
+      <hr class="opacity-10" />
+    </div>
+
+    <!-- Table -->
+
+    <!-- Data -->
+    <div class="row g-2">
+      <table id="prodTable" class="ui celled table" style="width: 100%">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Mã SP</th>
+            <th>Tên</th>
+            <th>Tag</th>
+            <th>Thể loại</th>
+            <th>Giá bán</th>
+            <th>Số lượng</th>
+          </tr>
+        </thead>
+        <tfoot style="display: table-header-group;">
+          <tr>
+            <th></th>
+            <th>Mã SP</th>
+            <th>Tên</th>
+            <th>Tag</th>
+            <th>Thể loại</th>
+            <th>Giá bán</th>
+            <th>Số lượng</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <% listP.forEach((obj,index) => { %>
+          <tr>
+            <td><%= index+1 %></td>
+            <td>
+              <a href="#detailModal<%= obj.sku %>" data-bs-toggle="modal" style="text-decoration: none;"><%= obj.sku %></a>
+            </td>
+            <td><%= obj.name %></td>
+            <td><%= obj.tag%></td>
+            <td><%= obj.category.name %></td>
+            <td><%= obj.price %></td>
+            <td><%= obj.qty %></td>
+          </tr>
+
+          <!-- Detail Modal -->
+          <div class="modal fade modal-lg" id="detailModal<%= obj.sku %>" tabindex="-1" role="" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content ">
+                <div class="modal-body">
+                  <div class="row justify-content-center align-items-center px-3">
+                    <div class="container py-5">
+                      <div class="row justify-content-center mb-3">
+                        <div class="col-md-12 col-xl-10">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                                  <img src="<%= obj.img %>" class="w-100">
+                                  <a href="#!">
+                                    <div class="hover-overlay">
+                                      <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                              <div class="col-md-6 col-lg-6 col-xl-6">
+                                <h4><%= obj.name %></h4>
+                                <div class="mb-2 text-muted">
+                                  <span><%= obj.tag %></span>
+                                  <span class="text-primary"> • </span>
+                                  <span><%= obj.category.name %></span>
+                                </div>
+                                <p class="mb-4 mb-md-0">
+                                  <%= obj.description %>
+                                </p>
+                              </div>
+                              <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                <div class="d-flex flex-row align-items-center mb-1">
+                                  <h2 class="mb-1 me-1 text-primary"><%= obj.price %> VND</h2>
+                                </div>
+                                <div class="d-flex flex-column mt-4">
+                                  <form method="post">
+                                    <input type="hidden" name="type" value="delete">
+                                    <input type="hidden" name="pID" value="<%= obj.sku %>">
+                                    <button class="btn btn-warning btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#updateModal<%= obj.sku %>">
+                                      Sửa
+                                    </button>
+                                    <button class="btn btn-outline-primary btn-sm mt-2" type="submit" onclick="return confirm('Chắc chắn muốn xóa?')" data-bs-dismiss="modal">
+                                      Xóa
+                                    </button>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Update model -->
+          <div class="modal fade" id="updateModal<%= obj.sku %>" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-center col-11 ps-5" id="modalTitleId">
+                    <b class=""><i class="fas fa-splotch fs-6"></i> CẬP NHẬT SẢN PHẨM <i class="fas fa-splotch fs-6"></i></b>
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post" enctype="multipart/form-data">
+                  <div class="modal-body">
+                    <div class="container-fluid">
+                      <input type="hidden" name="type" value="update">
+                      <div class="mb-3">
+                        <label for="" class="form-label">Mã SP</label>
+                        <input type="hidden" class="form-control" name="id" value="<%= obj._id %>" />
+                        <input type="hidden" class="form-control" name="sku" value="<%= obj.sku %>" />
+                        <input type="text" class="form-control" value="<%= obj.sku %>" disabled />
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Tên</label>
+                        <input type="text" class="form-control" name="name" value="<%= obj.name %>" />
+                      </div>
+                      <div class="col-md-1 mb-md-3"></div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Tag</label>
+                        <input type="text" class="form-control" name="tag" value="<%= obj.tag %>" />
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Thể loại</label>
+                        <select class="form-select" name="cat" id="">
+                          <% listC.forEach((item) => { 
+                            let selected = ''
+                            if(String(item._id) == String(obj.category._id))
+                              {selected = ' selected'} %>
+                          <option <%= selected %> value="<%= item._id %>"><%= item.name %></option>
+                          <% }) %>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Giá bán</label>
+                        <input type="number" class="form-control" name="price" value="<%= obj.price %>">
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Số lượng</label>
+                        <input type="number" class="form-control" name="qty" value="<%= obj.qty %>">
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Ảnh</label>
+                        <input type="file" class="form-control" name="img" value="" aria-describedby="fileHelpId">
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Mô tả</label>
+                        <textarea class="form-control" name="description" id="" rows="3"><%= obj.description %></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                      Đóng
+                    </button>
+                    <button type="submit" class="btn btn-success">Sửa</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<%- include('../inc/bottom.ejs') %>

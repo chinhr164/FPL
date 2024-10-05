@@ -1,0 +1,91 @@
+ <!-- Button trigger modal -->
+ <button type="button" class="btn btn-primary" style="width: 5%;" data-bs-toggle="modal" data-bs-target="#addModal">
+   <i class="fas fa-plus"></i> Tạo
+ </button>
+
+
+ <!-- Modal -->
+ <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title text-center col-11 ps-5" id="modalTitleId">
+           <b class=""><i class="fas fa-splotch fs-6"></i> THÊM SẢN PHẨM <i class="fas fa-splotch fs-6"></i></b>
+         </h5>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <form method="post" enctype="multipart/form-data">
+        <input type="hidden" name="type" value="add">
+         <div class="modal-body">
+           <div class="container-fluid">
+             <div class="mb-3">
+               <label for="" class="form-label">Mã SP</label>
+               <input type="text" class="form-control" placeholder="" name="sku" required />
+             </div>
+             <div class="col-md-1 mb-md-3"></div>
+             <div class="mb-3">
+               <label for="" class="form-label">Tên</label>
+               <input type="text" class="form-control" name="name" required />
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">Tag</label>
+               <input type="text" class="form-control" name="tag" required />
+             </div>
+             <!-- <div class="mb-3">
+             <label for="" class="form-label">Tag</label>
+             <select class="form-select" name="" id="">
+               <option selected>Select one</option>
+               <option value=""></option>
+               <option value="">Valentine</option>
+               <option value="">Mid-autumn Festival</option>
+             </select>
+           </div>-->
+             <div class="mb-3">
+               <label for="" class="form-label">Thể loại</label>
+               <select class="form-select" name="cat" id="">
+                <% listC.forEach((obj) => { %>
+                  <option value="<%= obj._id %>"><%= obj.name %></option>
+                  <% }) %>
+               </select>
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">Giá bán</label>
+               <input type="number" class="form-control" name="price">
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">Số lượng</label>
+               <input type="number" class="form-control" name="qty">
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">Ảnh</label>
+               <input type="file" class="form-control" name="img" aria-describedby="fileHelpId">
+             </div>
+             <div class="mb-3">
+               <label for="" class="form-label">Mô tả</label>
+               <textarea class="form-control" name="description" rows="3"></textarea>
+             </div>
+           </div>
+         </div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+             Đóng
+           </button>
+           <button type="submit" class="btn btn-success">Tạo</button>
+         </div>
+       </form>
+     </div>
+   </div>
+ </div>
+
+ <script>
+   var modalId = document.getElementById("modalId");
+
+   modalId.addEventListener("show.bs.modal", function(event) {
+     // Button that triggered the modal
+     let button = event.relatedTarget;
+     // Extract info from data-bs-* attributes
+     let recipient = button.getAttribute("data-bs-whatever");
+
+     // Use above variables to manipulate the DOM
+   });
+ </script>

@@ -1,0 +1,50 @@
+<%- include('./inc/top.index.ejs') %>
+<div class="container-fluid ps-md-0">
+  <div class="row g-0">
+    <div class="d-none d-md-flex col-md-4 ps-5 col-md-6 bg-image align-items-center">
+      <img class="" style="object-fit: contain; width: 100%; height: 350px;" src="/images/brand/logoH'Patisserie_big.png" alt="Title">
+    </div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto align-items-xs-center">
+              <% if(size=="small") {%>
+              <img class="" style="object-fit: contain; margin: -50px 0 0; width: 100%; height: 150px;" src="/images/brand/logoH'Patisserie_big.png" alt="Title">
+              <h2 class="text-center mb-4">Welcomeback</h2>
+              <% } %>
+              <% if(size!="small") {%>
+              <h3 class="mb-4">Welcomeback</h3>
+              <% } %>
+
+              <!-- Sign In Form -->
+              <form action="/" method="post">
+                <div class="form-floating mb-3 ">
+                  <input class="form-control" name="username" id="floatingInput" placeholder="Username/Email address" required>
+                  <label for="floatingInput">Username/Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                  <label for="floatingPassword" id="password">Password</label>
+                </div>
+                <div class="d-grid">
+                  <% if(msg!=''){ %>
+                  <div class="text-primary mb-3">
+                    <%= msg %>
+                  </div>
+                  <% } %>
+                  <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
+                  <div class="text-center">
+                    <a class="small" href="" onclick="alert('Chức năng đang phát triển')"> Forgot password? </a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('./inc/bottom.index.ejs') %>
